@@ -21,13 +21,14 @@ export const Counter = () =>{
     return(
         <div> 
             <hr />
-            <h1>Contador de clicks</h1>
+            <h2>Contador de clicks</h2>
             <button onClick={sumar}>Sumar</button>
             <button onClick={restar}>Restar</button>
             <p>Clicks: {counter}</p>
             <hr />
             <button onClick={cambiarSaludos}>Saludar</button>
             <p className={saludo ?"hola":"chau"}>{saludo ? "Hola mundo" : "Chau mundo"}</p>
+            <hr />
         </div>
     )
 }

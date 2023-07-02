@@ -1,0 +1,28 @@
+
+.header{
+  background-color: darkgrey;
+  .header__container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .header__logo{
+    width: 40px;
+  }
+  .navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .navbar__link{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
