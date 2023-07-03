@@ -8,7 +8,7 @@ export const Counter = () =>{
 
     
     const sumar = () =>{
-        setCount(counter + 1)
+        scounteretCount( + 1)
     }
     const restar = () =>{
         setCount(counter - 1)
