@@ -1,4 +1,5 @@
 import'./header.scss'
+import { Navbar } from '../NavBar/Navbar'
 
 export const Header = () =>{
 
@@ -17,11 +18,7 @@ export const Header = () =>{
 
                 <h1 className="header__title">Titulo web</h1>
                 
-                <nav className="navbar">
-                    <a className="navbar__link" href="">enlace 1</a>
-                    <a className="navbar__link" href="">enlace 2</a>
-                    <a className="navbar__link" href="">enlace 3</a>
-                </nav>
+                <Navbar/>
             </div>
         </header>
     )
