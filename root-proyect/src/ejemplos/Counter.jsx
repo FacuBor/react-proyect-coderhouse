@@ -17,7 +17,7 @@ export const Counter = () =>{
     return(
         <div> 
             <hr />
-            <h2>Contador de clicks</h2>
+            <h2>Clicks</h2>
             <button onClick={sumar}>Sumar</button>
             <button onClick={restar}>Restar</button>
             <p>Clicks: {counter}</p>

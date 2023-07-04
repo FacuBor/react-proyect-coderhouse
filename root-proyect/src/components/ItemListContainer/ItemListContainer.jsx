@@ -1,20 +1,26 @@
+import { useEffect, useState } from 'react'
 import './ItemListContainer.scss'
-import { Counter } from '../../ejemplos/Counter'
+import { pedirDatos } from '../../helpers/pedirDatos'
+import { ItemList } from '../ItemList/ItemList'
 
 
-export const ItemListContainer = ({saludo}) =>{
+export const ItemListContainer = () =>{
+    const [products, setProducts]= useState([])
+    console.log(products)
+    
+        useEffect(()=>{
+            pedirDatos()
+                    .then((res)=>{
+                        setProducts(res)
+                    })
+                    .catch((error)=>{
+                        console.log(error)
+                    })
+        }, [])
 
     return(
-        <div className="products__container">
-            <h2>Item List Container</h2>
-            <hr />
-            <p>Coder House</p>
-            <Counter />
-
-            
+        <div>
+            <ItemList products={products} />
         </div>
     )
-
-
-
 }
