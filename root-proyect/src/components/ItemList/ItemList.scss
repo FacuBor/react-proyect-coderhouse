@@ -1,0 +1,12 @@
+
+.cardContainer{
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 0.4fr));
+    grid-auto-rows: 360px;
+    gap: 15px;
+    justify-content: center;
+    text-align: center;
+    
+    
+}

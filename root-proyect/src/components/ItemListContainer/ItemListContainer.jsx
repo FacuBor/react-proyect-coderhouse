@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react'
 import './ItemListContainer.scss'
 import { pedirDatos } from '../../helpers/pedirDatos'
 import { ItemList } from '../ItemList/ItemList'
+import { Aside } from '../Aside/Aside'
 
 
 export const ItemListContainer = () =>{
     const [products, setProducts]= useState([])
-    console.log(products)
     
         useEffect(()=>{
             pedirDatos()
@@ -19,7 +19,8 @@ export const ItemListContainer = () =>{
         }, [])
 
     return(
-        <div>
+        <div className='contentBody'>
+            <Aside /> 
             <ItemList products={products} />
         </div>
     )
