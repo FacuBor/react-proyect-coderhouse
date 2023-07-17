@@ -1,27 +1,19 @@
-import { useEffect, useState } from 'react'
 import './ItemListContainer.scss'
-import { pedirDatos } from '../../helpers/pedirDatos'
-import { ItemList } from '../ItemList/ItemList'
-import { Aside } from '../Aside/Aside'
+import { useProducts } from '../../hooks/useProducts'
+import { AsideAndItems } from '../AsideAndItems/AsideAndItems'
 
 
 export const ItemListContainer = () =>{
-    const [products, setProducts]= useState([])
-    
-        useEffect(()=>{
-            pedirDatos()
-                    .then((res)=>{
-                        setProducts(res)
-                    })
-                    .catch((error)=>{
-                        console.log(error)
-                    })
-        }, [])
-
+    const {loading} = useProducts()
     return(
         <div className='contentBody'>
-            <Aside /> 
-            <ItemList products={products} />
+            
+            {
+                loading
+                    ? <h3 className='text-primary mb-5'>Cargando...</h3>
+                    : <AsideAndItems/>
+            }
+            
         </div>
     )
 }
