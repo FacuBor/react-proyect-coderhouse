@@ -1,8 +1,13 @@
 .contentBody{
+    padding-top: 5vh;
     width: 100%;
-    margin-top: 5vh;
+    height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    .loadingText{
+        width: 70%;
+        font-size: 25px;
+    }
 }
 

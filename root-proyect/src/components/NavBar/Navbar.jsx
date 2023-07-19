@@ -1,11 +1,12 @@
 import './Navbar.scss'
+import { Link } from 'react-router-dom'
 
 export const Navbar = () =>{
     return(
         <nav className="navbar">
-                    <a className="navbar__link" href="">Inicio</a>
-                    <a className="navbar__link" href="">Contacto</a>
-                    <a className="navbar__link" href="">Acerca de</a>
+                    <Link className="navbar__link" to="/home">Inicio</Link>
+                    <Link className="navbar__link" to="/itemlist">Productos</Link>
+                    <Link className="navbar__link" to="/contact">Contacto</Link>
         </nav>
     )
 }

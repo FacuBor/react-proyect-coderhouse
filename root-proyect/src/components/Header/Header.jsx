@@ -4,10 +4,6 @@ import { Navbar } from '../NavBar/Navbar'
 export const Header = () =>{
 
     
-
-
-
-
     
     return(
         <header className="header">

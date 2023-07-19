@@ -3,4 +3,33 @@
     height: 80vh;
     border: .5px solid rgb(216, 215, 215);
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    .contentAside{
+        width: 100%;
+        display: grid;
+        place-items: center;
+    }
+    .asideNav{
+        padding: 5%;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 4vh;
+        background-color: white;
+        border: .5px solid rgb(216, 215, 215);
+        border-radius: 5px;
+
+    }
+    .asideLink{
+        text-decoration: none;
+        font-size: 1vw;
+        color: rgb(0, 0, 0);
+        
+    }
+    .asideLink:hover{
+        color: cornflowerblue;
+        cursor: pointer;
+    }
 }
