@@ -1,5 +1,5 @@
 import'./header.scss'
-import { Navbar } from '../NavBar/Navbar'
+import { Menu } from '../Menu/Menu'
 
 export const Header = () =>{
 
@@ -10,7 +10,7 @@ export const Header = () =>{
             <div className="header__container">
                 <img className="header__logo" src="/src/assets/react.svg" alt="" srcset="" />
                 <h1 className="header__title">TechnoShop</h1>
-                <Navbar/>
+                <Menu/>
             </div>
         </header>
     )

@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Home } from './components/Home/Home';
 import { Contact } from './components/Contact/Contact';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer'
- 
+
 
 function App() {
 
@@ -21,7 +21,7 @@ function App() {
             <Route path='/itemlist/:categoryId' element= { <ItemListContainer /> }/>
             <Route path='/detail/:itemId' element= { <ItemDetailContainer/> } />
             <Route path='/contact' element={ <Contact /> } />
-            <Route path='*' element={ <h2>Pagina no encontrada</h2> } />
+            <Route path='*' element={ <h2 className='text-danger'>Pagina no encontrada</h2> } />
           </Routes>
 
           {/* footer */}

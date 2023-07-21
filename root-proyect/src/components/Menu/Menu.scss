@@ -1,0 +1,65 @@
+.menuIcon{
+    font-size: 28px;
+
+}
+.menuIcon:hover{
+    cursor: pointer;
+    color: gray;
+}
+.closeIcon{
+    color: gray;
+    font-size: 25px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    margin: 20px 20px 0px 0px;
+}
+.closeIcon:hover{
+    color: red;
+    cursor: pointer;
+}
+.menu-backdrop{
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    position: fixed;
+    inset: 0;
+    z-index: 80;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .15s .1s;
+        .menuList{
+            background-color: lightblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: flex-start;
+            padding: 50px 30px 20px 30px;
+            gap: 20px;
+            width: 250px;
+            height: 100%;
+            position: absolute;
+            right: -400px;
+            z-index: 101;
+            transition: right .15s ease-in-out;
+            
+            .menuList__link{
+                color: black;
+                font-size: 20px;
+                font-weight: 700;
+                text-decoration: none;
+            }
+            .menuList__link:hover{
+                color: gray;
+                cursor: pointer;
+            }
+        }
+} 
+.menu-active{
+    .menu-backdrop{
+        visibility: visible;
+        opacity: 1;
+        .menuList{
+            right: 0px;
+            transition: right .15s ease-in-out .1s;
+        }
+    }
+}
