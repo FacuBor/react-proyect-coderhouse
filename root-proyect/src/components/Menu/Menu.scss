@@ -1,13 +1,14 @@
 .menuIcon{
     font-size: 28px;
+    color: rgb(41, 42, 47);
 
 }
 .menuIcon:hover{
     cursor: pointer;
-    color: gray;
+    color: rgb(217, 123, 0);
 }
 .closeIcon{
-    color: gray;
+    color: rgb(0, 0, 0);
     font-size: 25px;
     position: absolute;
     right: 0px;
@@ -15,7 +16,7 @@
     margin: 20px 20px 0px 0px;
 }
 .closeIcon:hover{
-    color: red;
+    color: rgb(255, 255, 255);
     cursor: pointer;
 }
 .menu-backdrop{
@@ -27,7 +28,7 @@
     opacity: 0;
     transition: all .15s .1s;
         .menuList{
-            background-color: lightblue;
+            background-color: rgb(217, 123, 0);
             display: flex;
             flex-direction: column;
             justify-content: start;
@@ -42,13 +43,13 @@
             transition: right .15s ease-in-out;
             
             .menuList__link{
-                color: black;
+                color: rgb(255, 254, 254);
                 font-size: 20px;
                 font-weight: 700;
                 text-decoration: none;
             }
             .menuList__link:hover{
-                color: gray;
+                color: rgb(91, 91, 91);
                 cursor: pointer;
             }
         }
