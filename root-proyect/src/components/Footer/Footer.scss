@@ -1,0 +1,32 @@
+.footerContainer{
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    height: 200px;
+    background-color: rgb(249, 141, 0);
+    padding: 10px;
+    display: grid;
+    place-items: center;
+    .footerContent{
+        padding: 15px;
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        .footerIcon{
+            font-size: 2vw;
+            color: rgb(74, 76, 86);
+        }
+        .footerIcon:hover{
+            color: rgb(122, 125, 141);
+        }
+        .iconContainer{
+            display: flex;
+            gap: 40px;
+
+        }
+    }
+}

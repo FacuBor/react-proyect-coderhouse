@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Home } from './components/Home/Home';
 import { Contact } from './components/Contact/Contact';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer'
+import { Footer } from './components/Footer/Footer'
 
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
             <Route path='*' element={ <h2 className='text-danger'>Pagina no encontrada</h2> } />
           </Routes>
 
-          {/* footer */}
+          <Footer />
 
       </BrowserRouter>
 

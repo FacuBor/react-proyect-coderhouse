@@ -13,7 +13,7 @@
     }
     .asideNav{
         padding: 5%;
-        width: 60%;
+        width: 80%;
         display: flex;
         flex-direction: column;
         gap: 4vh;
@@ -24,7 +24,8 @@
     .asideLink{
         text-decoration: none;
         font-size: 1vw;
-        color: rgb(0, 0, 0);
+        color: rgb(74, 76, 86);
+        font-weight: 600;
         
     }
     .asideLink:hover{
