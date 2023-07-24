@@ -1,8 +1,16 @@
+import { useEffect } from 'react'
+import { useState } from 'react'
 import './Contact.scss'
 
 
 
 export const Contact = () =>{
+
+    useEffect(() => {
+        window.addEventListener('click', ()=>{
+            console.log('Click')
+        })
+    }, [])
 
 
     return(

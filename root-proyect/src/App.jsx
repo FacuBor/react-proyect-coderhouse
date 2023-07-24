@@ -15,18 +15,15 @@ function App() {
 
       <BrowserRouter >
           <Header />
-
-          <Routes>
-            <Route path='/' element={ <Home />} />
-            <Route path='/itemlist' element={ <ItemListContainer /> } />
-            <Route path='/itemlist/:categoryId' element= { <ItemListContainer /> }/>
-            <Route path='/detail/:itemId' element= { <ItemDetailContainer/> } />
-            <Route path='/contact' element={ <Contact /> } />
-            <Route path='*' element={ <h2 className='text-danger'>Pagina no encontrada</h2> } />
-          </Routes>
-
+              <Routes>
+                <Route path='/' element={ <Home />} />
+                <Route path='/itemlist' element={ <ItemListContainer /> } />
+                <Route path='/itemlist/:categoryId' element= { <ItemListContainer /> }/>
+                <Route path='/detail/:itemId' element= { <ItemDetailContainer/> } />
+                <Route path='/contact' element={ <Contact /> } />
+                <Route path='*' element={ <h2 className='text-danger'>Pagina no encontrada</h2> } />
+              </Routes>
           <Footer />
-
       </BrowserRouter>
 
   )
