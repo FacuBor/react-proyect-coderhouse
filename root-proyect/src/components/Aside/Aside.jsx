@@ -15,6 +15,7 @@ export const Aside = () =>{
                     <Link className='asideLink' to="/itemlist/almacenamiento">Almacenamiento</Link>
                     <Link className='asideLink' to="/itemlist/placasDeVideo">Placas de Video</Link>
                     <Link className='asideLink' to="/itemlist/fuentes">Fuentes</Link>
+                    <Link className='asideLink' to="/itemlist/otros">Otros</Link>
                 </nav>
             </div>
         </div>

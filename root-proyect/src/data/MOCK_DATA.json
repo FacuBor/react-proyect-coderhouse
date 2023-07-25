@@ -4,7 +4,7 @@
         "nombre":"Gabinete Azza",
         "descripcion": "Negro estriado",
         "precio": 1500,
-        "img":"../src/assets/img/gabinetes/gabinete__azza-white.png",
+        "img":"/src/assets/img/gabinetes/gabinete__azza-white.png",
         "category":"gabinetes",
         "stock":"10"
     },
@@ -13,7 +13,7 @@
         "nombre":"Gabinete Azza",
         "descripcion": "Negro mallado",
         "precio": 1500,
-        "img":"../src/assets/img/gabinetes/gabinete__azza2.png",
+        "img":"/src/assets/img/gabinetes/gabinete__azza2.png",
         "category":"gabinetes",
         "stock":"10"
     },
@@ -22,7 +22,7 @@
         "nombre":"Gabinete Azza",
         "descripcion": "White & black",
         "precio": 1500,
-        "img":"../src/assets/img/gabinetes/gabinete__azza-white.png",
+        "img":"/src/assets/img/gabinetes/gabinete__azza-white.png",
         "category":"gabinetes",
         "stock":"10"
     },
@@ -31,7 +31,7 @@
         "nombre":"Gabinete Cooler Master",
         "descripcion": "White & black",
         "precio": 1500,
-        "img":"../src/assets/img/gabinetes/gabinete__coolermaster.png",
+        "img":"/src/assets/img/gabinetes/gabinete__coolermaster.png",
         "category":"gabinetes",
         "stock":"10"
     },
@@ -40,7 +40,7 @@
         "nombre":"Gabinete Deep Cool",
         "descripcion": "White",
         "precio": 1500,
-        "img":"../src/assets/img/gabinetes/gabinete__deepcool.png",
+        "img":"/src/assets/img/gabinetes/gabinete__deepcool.png",
         "category":"gabinetes",
         "stock":"10"
     },
@@ -49,7 +49,7 @@
         "nombre":"Gabinete SilverStone",
         "descripcion": "Black",
         "precio": 1500,
-        "img":"../src/assets/img/gabinetes/gabinete__Silverstone.png",
+        "img":"/src/assets/img/gabinetes/gabinete__Silverstone.png",
         "category":"gabinetes",
         "stock":"10"
     },
@@ -69,7 +69,7 @@
         "nombre":"Core i3",
         "descripcion": "lorem ipsum...",
         "precio": 1500,
-        "img":"../src/assets/img/procesadores/coreI3.png",
+        "img":"/src/assets/img/procesadores/coreI3.png",
         "category":"procesadores",
         "stock":"10"
     },
@@ -78,7 +78,7 @@
         "nombre":"Core i5",
         "descripcion": "lorem ipsum...",
         "precio": 1500,
-        "img":"../src/assets/img/procesadores/coreI5.png",
+        "img":"/src/assets/img/procesadores/coreI5.png",
         "category":"procesadores",
         "stock":"10"
     },
@@ -87,7 +87,7 @@
         "nombre":"Core i7",
         "descripcion": "lorem ipsum...",
         "precio": 1500,
-        "img":"../src/assets/img/procesadores/coreI7.png",
+        "img":"/src/assets/img/procesadores/coreI7.png",
         "category":"procesadores",
         "stock":"10"
     },
@@ -96,7 +96,7 @@
         "nombre":"Core i9",
         "descripcion": "lorem ipsum...",
         "precio": 1500,
-        "img":"../src/assets/img/procesadores/coreI9.png",
+        "img":"/src/assets/img/procesadores/coreI9.png",
         "category":"procesadores",
         "stock":"10"
     },
@@ -105,7 +105,7 @@
         "nombre":"Ryzen 3",
         "descripcion": "lorem ipsum...",
         "precio": 1500,
-        "img":"../src/assets/img/procesadores/ryzen3.png",
+        "img":"/src/assets/img/procesadores/ryzen3.png",
         "category":"procesadores",
         "stock":"10"
     },
@@ -114,7 +114,7 @@
         "nombre":"Ryzen 5",
         "descripcion": "lorem ipsum...",
         "precio": 1500,
-        "img":"../src/assets/img/procesadores/ryzen5.png",
+        "img":"/src/assets/img/procesadores/ryzen5.png",
         "category":"procesadores",
         "stock":"10"
     },
@@ -123,7 +123,7 @@
         "nombre":"Ryzen 7",
         "descripcion": "lorem ipsum...",
         "precio": 1500,
-        "img":"../src/assets/img/procesadores/ryzen7.png",
+        "img":"/src/assets/img/procesadores/ryzen7.png",
         "category":"procesadores",
         "stock":"10"
     },
@@ -132,7 +132,7 @@
         "nombre":"Ryzen 9",
         "descripcion": "lorem ipsum...",
         "precio": 1500,
-        "img":"../src/assets/img/procesadores/ryzen9.png",
+        "img":"/src/assets/img/procesadores/ryzen9.png",
         "category":"procesadores",
         "stock":"10"
     },
@@ -146,7 +146,7 @@
         "nombre":"Corsair",
         "descripcion": "8 GB",
         "precio": 1500,
-        "img":"../src/assets/img/ram/corsair__8GB.png",
+        "img":"/src/assets/img/ram/corsair__8GB.png",
         "category":"memoriasRam",
         "stock":"10"
     },
@@ -155,7 +155,7 @@
         "nombre":"Corsair",
         "descripcion": "16 GB",
         "precio": 1500,
-        "img":"../src/assets/img/ram/corsair__16GB.png",
+        "img":"/src/assets/img/ram/corsair__16GB.png",
         "category":"memoriasRam",
         "stock":"10"
     },
@@ -164,7 +164,7 @@
         "nombre":"Kingstone Fury",
         "descripcion": "8 GB",
         "precio": 1500,
-        "img":"../src/assets/img/ram/kingstone__fury-8GB.png",
+        "img":"/src/assets/img/ram/kingstone__fury-8GB.png",
         "category":"memoriasRam",
         "stock":"10"
     },
@@ -173,7 +173,7 @@
         "nombre":"Kingstone Fury",
         "descripcion": "16 GB",
         "precio": 1500,
-        "img":"../src/assets/img/ram/kingstone__fury-16GB.png",
+        "img":"/src/assets/img/ram/kingstone__fury-16GB.png",
         "category":"memoriasRam",
         "stock":"10"
     },
@@ -186,7 +186,7 @@
         "nombre":"Asus Rog 4070ti",
         "descripcion": "16 GB",
         "precio": 1500,
-        "img":"../src/assets/img/placas de video/asus__Rog--4070ti.png",
+        "img":"/src/assets/img/placas de video/asus__Rog--4070ti.png",
         "category":"placasDeVideo",
         "stock":"10"
     },
@@ -195,7 +195,7 @@
         "nombre":"Asus Tuf 1660super",
         "descripcion": "6 GB",
         "precio": 1500,
-        "img":"../src/assets/img/placas de video/asus__Tuf--1660super.png",
+        "img":"/src/assets/img/placas de video/asus__Tuf--1660super.png",
         "category":"placasDeVideo",
         "stock":"10"
     },
@@ -204,7 +204,7 @@
         "nombre":"Gigabyte Ventus 3060",
         "descripcion": "8 GB",
         "precio": 1500,
-        "img":"../src/assets/img/placas de video/gigabyte__ventus--3060.png",
+        "img":"/src/assets/img/placas de video/gigabyte__ventus--3060.png",
         "category":"placasDeVideo",
         "stock":"10"
     },
@@ -213,7 +213,7 @@
         "nombre":"Gigabyte Windforce 2060",
         "descripcion": "8 GB",
         "precio": 1500,
-        "img":"../src/assets/img/placas de video/gigabyte__Windforce--2060.png",
+        "img":"/src/assets/img/placas de video/gigabyte__Windforce--2060.png",
         "category":"placasDeVideo",
         "stock":"10"
     },
@@ -222,7 +222,7 @@
         "nombre":"MSI 1660",
         "descripcion": "6 GB",
         "precio": 1500,
-        "img":"../src/assets/img/placas de video/msi__gaming--1660.png",
+        "img":"/src/assets/img/placas de video/msi__gaming--1660.png",
         "category":"placasDeVideo",
         "stock":"10"
     },
@@ -231,7 +231,7 @@
         "nombre":"MSI 2060",
         "descripcion": "8 GB",
         "precio": 1500,
-        "img":"../src/assets/img/placas de video/msi__gaming--2060.png",
+        "img":"/src/assets/img/placas de video/msi__gaming--2060.png",
         "category":"placasDeVideo",
         "stock":"10"
     },
@@ -243,7 +243,7 @@
         "nombre":"Corsair",
         "descripcion": "750w",
         "precio": 1500,
-        "img":"../src/assets/img/fuentes/corsair__750w.png",
+        "img":"/src/assets/img/fuentes/corsair__750w.png",
         "category":"fuentes",
         "stock":"10"
     },
@@ -252,7 +252,7 @@
         "nombre":"Corsair",
         "descripcion": "1200W",
         "precio": 1500,
-        "img":"../src/assets/img/fuentes/corsair__1200w.png",
+        "img":"/src/assets/img/fuentes/corsair__1200w.png",
         "category":"fuentes",
         "stock":"10"
     },
@@ -261,7 +261,7 @@
         "nombre":"Gigabyte",
         "descripcion": "550w",
         "precio": 1500,
-        "img":"../src/assets/img/fuentes/gigabyte__550w.png",
+        "img":"/src/assets/img/fuentes/gigabyte__550w.png",
         "category":"fuentes",
         "stock":"10"
     },
@@ -270,7 +270,7 @@
         "nombre":"Gigabyte",
         "descripcion": "850w",
         "precio": 1500,
-        "img":"../src/assets/img/fuentes/gigabyte__850w.png",
+        "img":"/src/assets/img/fuentes/gigabyte__850w.png",
         "category":"fuentes",
         "stock":"10"
     },
@@ -279,7 +279,7 @@
         "nombre":"Thermaltake",
         "descripcion": "650w",
         "precio": 1500,
-        "img":"../src/assets/img/fuentes/thermaltake__650w.png",
+        "img":"/src/assets/img/fuentes/thermaltake__650w.png",
         "category":"fuentes",
         "stock":"10"
     },
@@ -288,7 +288,7 @@
         "nombre":"Thermaltake",
         "descripcion": "850w",
         "precio": 1500,
-        "img":"../src/assets/img/fuentes/thermaltake__850w.png",
+        "img":"/src/assets/img/fuentes/thermaltake__850w.png",
         "category":"fuentes",
         "stock":"10"
     },
@@ -301,7 +301,7 @@
         "nombre":"SSD WesternD",
         "descripcion": "480 GB",
         "precio": 1500,
-        "img":"../src/assets/img/almacenamiento/ssd__WesternD--480GB.png",
+        "img":"/src/assets/img/almacenamiento/ssd__WesternD--480GB.png",
         "category":"almacenamiento",
         "stock":"10"
     },
@@ -310,7 +310,7 @@
         "nombre":"SSD Kingstone",
         "descripcion": "240 GB",
         "precio": 1500,
-        "img":"../src/assets/img/almacenamiento/ssd__kingstone--480GB.png",
+        "img":"/src/assets/img/almacenamiento/ssd__kingstone--480GB.png",
         "category":"almacenamiento",
         "stock":"10"
     },
@@ -319,7 +319,7 @@
         "nombre":"SSD Corsair M.2",
         "descripcion": "480 GB",
         "precio": 1500,
-        "img":"../src/assets/img/almacenamiento/ssd__corsair__M2--480GB.png",
+        "img":"/src/assets/img/almacenamiento/ssd__corsair__M2--480GB.png",
         "category":"almacenamiento",
         "stock":"10"
     },
@@ -328,7 +328,7 @@
         "nombre":"HDD WesternD",
         "descripcion": "1 TB",
         "precio": 1500,
-        "img":"../src/assets/img/almacenamiento/hdd__1TB--WesternD.png",
+        "img":"/src/assets/img/almacenamiento/hdd__1TB--WesternD.png",
         "category":"almacenamiento",
         "stock":"10"
     },
@@ -339,7 +339,7 @@
         "nombre":"Logitech G203",
         "descripcion": "Cable - white",
         "precio": 1500,
-        "img":"../src/assets/img/perifericos/mouse/logitech--203--white.png",
+        "img":"/src/assets/img/perifericos/mouse/logitech--203--white.png",
         "category":"perifericos",
         "stock":"10"
     },
@@ -348,7 +348,7 @@
         "nombre":"Logitech Pro X ",
         "descripcion": "Wireless",
         "precio": 1500,
-        "img":"../src/assets/img/perifericos/mouse/logitech--superlight--Red.png",
+        "img":"/src/assets/img/perifericos/mouse/logitech--superlight--Red.png",
         "category":"perifericos",
         "stock":"10"
     },
@@ -359,7 +359,7 @@
         "nombre":"Hyperx Alloy",
         "descripcion": "RGB - Mecanico",
         "precio": 1500,
-        "img":"../src/assets/img/perifericos/teclados/hyperx--alloy.png",
+        "img":"/src/assets/img/perifericos/teclados/hyperx--alloy.png",
         "category":"perifericos",
         "stock":"10"
     },
@@ -368,7 +368,7 @@
         "nombre":"Redragon Vishnu",
         "descripcion": "RGB - Mecanico - Wireless",
         "precio": 1500,
-        "img":"../src/assets/img/perifericos/teclados/redragon--Vishnu.png",
+        "img":"/src/assets/img/perifericos/teclados/redragon--Vishnu.png",
         "category":"perifericos",
         "stock":"10"
     },
@@ -380,7 +380,7 @@
         "nombre":"Hyperx MousePad",
         "descripcion": "XL",
         "precio": 1500,
-        "img":"../src/assets/img/perifericos/pad/hyperx--XL.png",
+        "img":"/src/assets/img/perifericos/pad/hyperx--XL.png",
         "category":"perifericos",
         "stock":"10"
     },
@@ -389,7 +389,7 @@
         "nombre":"Logitech MousePad",
         "descripcion": "S",
         "precio": 1500,
-        "img":"../src/assets/img/perifericos/pad/logitech--S.png",
+        "img":"/src/assets/img/perifericos/pad/logitech--S.png",
         "category":"perifericos",
         "stock":"10"
     },
@@ -401,7 +401,7 @@
         "nombre":"Logitech G533 ",
         "descripcion": "Wireless",
         "precio": 1500,
-        "img":"../src/assets/img/perifericos/auriculares/logitech--G533.png",
+        "img":"/src/assets/img/perifericos/auriculares/logitech--G533.png",
         "category":"perifericos",
         "stock":"10"
     },
@@ -410,7 +410,7 @@
         "nombre":"Hyperx Cloud II",
         "descripcion": "Wireless",
         "precio": 1500,
-        "img":"../src/assets/img/perifericos/auriculares/hyperx--cloud--II.png",
+        "img":"/src/assets/img/perifericos/auriculares/hyperx--cloud--II.png",
         "category":"perifericos",
         "stock":"10"
     },
@@ -421,7 +421,7 @@
         "nombre":"Monitor Samsung",
         "descripcion": "22' 60gz",
         "precio": 1500,
-        "img":"../src/assets/img/perifericos/monitores/samsung--22--60hz.png",
+        "img":"/src/assets/img/perifericos/monitores/samsung--22--60hz.png",
         "category":"monitores",
         "stock":"10"
     },
@@ -430,7 +430,7 @@
         "nombre":"Monitor Gigabyte",
         "descripcion": "27' 75hz",
         "precio": 1500,
-        "img":"../src/assets/img/perifericos/monitores/gigabyte--75hz--27.png",
+        "img":"/src/assets/img/perifericos/monitores/gigabyte--75hz--27.png",
         "category":"monitores",
         "stock":"10"
     },
@@ -439,7 +439,7 @@
         "nombre":"Monitor LG",
         "descripcion": "24' 144gz",
         "precio": 1500,
-        "img":"../src/assets/img/perifericos/monitores/lg--24--144hz.png",
+        "img":"/src/assets/img/perifericos/monitores/lg--24--144hz.png",
         "category":"monitores",
         "stock":"10"
     },
@@ -448,9 +448,113 @@
         "nombre":"Monitor benQ",
         "descripcion": "Zowie 24' 240gz",
         "precio": 1500,
-        "img":"../src/assets/img/perifericos/monitores/benQ--zowie--240hz--24.png",
+        "img":"/src/assets/img/perifericos/monitores/benQ--zowie--240hz--24.png",
+        "category":"monitores",
+        "stock":"10"
+    },
+
+
+
+
+    {
+        "id":47 ,
+        "nombre":"recepto bluethoo",
+        "descripcion": "conexion 3.0",
+        "precio": 1500,
+        "img":"/src/assets/img/otros/receptorBluetooth4-0TPlink.png",
+        "category":"otros",
+        "stock":"10"
+    },
+    {
+        "id":48 ,
+        "nombre":"Cable Sata",
+        "descripcion": "cable",
+        "precio": 1500,
+        "img":"/src/assets/img/otros/cableSataASata.png",
+        "category":"otros",
+        "stock":"10"
+    },
+    {
+        "id":49 ,
+        "nombre":"Cable usb Tipo C",
+        "descripcion": "cable parra..",
+        "precio": 1500,
+        "img":"/src/assets/img/otros/cableUsbC.png",
+        "category":"otros",
+        "stock":"10"
+    },
+    {
+        "id":50 ,
+        "nombre":"Estabilizador tension",
+        "descripcion": "1000w de tension",
+        "precio": 1500,
+        "img":"/src/assets/img/otros/estabilizadorTension1000w.png",
+        "category":"otros",
+        "stock":"10"
+    },
+    {
+        "id":51 ,
+        "nombre":"brazo doble monitor",
+        "descripcion": "brazo doble ghasta 27'",
+        "precio": 1500,
+        "img":"/src/assets/img/otros/brazoDobleMonitor.png",
+        "category":"otros",
+        "stock":"10"
+    },
+
+
+
+
+    {
+        "id":52 ,
+        "nombre":"Pendrive",
+        "descripcion": "64gb",
+        "precio": 1500,
+        "img":"/src/assets/img/almacenamiento/penDriveSanDisk 64.png",
+        "category":"almacenamiento",
+        "stock":"10"
+    },
+    {
+        "id":53 ,
+        "nombre":"micro SD cat 10",
+        "descripcion": "128gb",
+        "precio": 1500,
+        "img":"/src/assets/img/almacenamiento/microSdLexar128GB.png",
+        "category":"almacenamiento",
+        "stock":"10"
+    },
+    {
+        "id":54 ,
+        "nombre":"Disco duro Externo",
+        "descripcion": "1 TB usb 3.0",
+        "precio": 1500,
+        "img":"/src/assets/img/almacenamiento/discoDuroExterno1tbSeagate.png",
+        "category":"almacenamiento",
+        "stock":"10"
+    },
+
+
+
+
+    {
+        "id":55 ,
+        "nombre":"Monitor Asus",
+        "descripcion": "22' 240hz",
+        "precio": 1500,
+        "img":"/src/assets/img/perifericos/monitores/Asus--XG--240hz18'.png",
+        "category":"monitores",
+        "stock":"10"
+    },
+    {
+        "id":56 ,
+        "nombre":"monitor Curvo",
+        "descripcion": "27'",
+        "precio": 1500,
+        "img":"/src/assets/img/perifericos/monitores/MonitorCurvoOdysseyArk--165hz--55'.png",
         "category":"monitores",
         "stock":"10"
     }
+    
+
 
 ]
