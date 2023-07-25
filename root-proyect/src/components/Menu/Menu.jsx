@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
+import { CartWidget } from '../CartWidget/CartWidget';
 import './Menu.scss'
 import { MenuList } from './MenuList';
 
@@ -17,7 +18,10 @@ export const Menu = () =>{
 
 
     return(
-        <div className={showMenu ? 'menu-active' : ''}>
+        <div className={showMenu ? 'menu-active menuContainer ' : 'menuContainer'}>
+            <div>
+                <CartWidget/>
+            </div>
             <div>
                 <FaBars onClick={handleOpen} className='menuIcon' />
             </div>

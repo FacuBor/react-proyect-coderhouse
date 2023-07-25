@@ -1,7 +1,7 @@
 
 import './ItemCount..scss'
 
-export const ItemCount = ({stock, counter, setCounter, addToCart}) =>{
+export const ItemCount = ({stock, counter, setCounter, handleAgregar}) =>{
     
 
     const handleRestar = () =>{
@@ -21,7 +21,7 @@ export const ItemCount = ({stock, counter, setCounter, addToCart}) =>{
             <button onClick={handleSumar} className='btn btn-primary'>+</button>
             </div>
 
-            <button onClick={addToCart}  className='btn btn-success addButton'>Add to Cart</button>
+            <button onClick={handleAgregar}  className='btn btn-success addButton'>Add to Cart</button>
         </div>
     )
 }

@@ -26,7 +26,7 @@ export const ItemDetailContainer = () =>{
 
 
     return(
-        <div className='itemDetailContainer '>
+        <div className='itemDetailContainer'>
             {
                 loading
                 ? <h2>Cargando...</h2>
