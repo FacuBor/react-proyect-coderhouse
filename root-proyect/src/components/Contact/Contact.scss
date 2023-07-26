@@ -1,6 +1,6 @@
 .contactBody{
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     background-color: rgb(74, 76, 86);
     .contactContainer{
         padding: 10px;
@@ -9,10 +9,28 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         .detailContainer{
             background-color: rgb(237, 237, 237);
-            width: 80%;
-            height: 100%;
+            width: 60%;
+            height: 90%;
+            .formControlCard{
+                padding:10px;
+                width: 50%;
+                height: 90%;
+                border: .5px rgb(186, 186, 186) solid;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                .input{
+                    width: 70%;
+                }
+                .textArea{
+                    width: 70%;
+                }
+            }
         }
     }
 }

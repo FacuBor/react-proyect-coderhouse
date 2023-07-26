@@ -4,17 +4,22 @@
     background-color: rgb(74, 76, 86);
     padding: 10px 10%;
     .home-container{
-        padding: 10px;
+        padding: 5px;
         width: 100%;
         height: 100%;
-        background-color: rgb(237, 237, 237);
+        background-color: rgb(255, 255, 255);
         display: flex;
         flex-direction: column;
         align-items: center;
-        .carouselContainer{
-            border: .3px solid gray;
-            width: 80%;
-            height: 90%;
-        }
+        justify-content: space-evenly;
+        
     }
-}
+    .carouselContainer{
+        background-color: rgb(192, 192, 192);
+        width: 90%;
+        height: 70%;
+        display: grid;
+        place-items: center;
+
+    }
+} 

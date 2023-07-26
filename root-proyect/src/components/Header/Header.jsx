@@ -3,6 +3,7 @@ import { Menu } from '../Menu/Menu'
 import { FaComputer } from "react-icons/fa6";
 import { useContext } from 'react';
 import { DarkModeContext } from '../../context/DarkModeContext';
+import { Link } from 'react-router-dom';
 
 export const Header = () =>{
 
@@ -10,7 +11,7 @@ export const Header = () =>{
     return(
         <header className="header">
             <div className="header__container">
-                <FaComputer className='header__logo '/>
+                <Link to="/"><FaComputer className='header__logo '/></Link>
                 <h3>TECHNO SHOP</h3>
                 <Menu/>
             </div>
