@@ -1,5 +1,5 @@
 .asideBody{
-    width: 20%;
+    width: 25%;
     height: 80vh;
     border-radius: 5px;
     display: flex;
@@ -18,18 +18,18 @@
         flex-direction: column;
         gap: 4vh;
         background-color: rgb(255, 255, 255);
-        border: .5px solid rgb(216, 215, 215);
+        border-radius: 5px;
+        overflow: hidden;
 
     }
     .asideLink{
         text-decoration: none;
-        font-size: 1vw;
-        color: rgb(74, 76, 86);
+        color: rgb(95, 95, 95);
         font-weight: 400;
+        margin-left: 5%;
         
     }
     .asideLink:hover{
-        color: cornflowerblue;
-        cursor: pointer;
+        color: rgb(249, 141, 0);
     }
 }

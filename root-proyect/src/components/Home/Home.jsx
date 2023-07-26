@@ -1,5 +1,5 @@
-
 import { CarouselHome } from '../Carousel/CarouselHome'
+import { HomeLogos } from './HomeLogos'
 import './Home.scss'
 
 
@@ -9,14 +9,10 @@ export const Home = () =>{
         <div className='homeBody'>
             <div className='home-container'>
 
-                <h1 className='mt-2 mb-4 text-secondary'>Welcome to the home section</h1>
+                <CarouselHome/>  
 
-
-                <div className='carouselContainer '>
-                    <CarouselHome/> 
-                </div>
-
-
+                <HomeLogos />
+                
             </div>
         </div>
     )
