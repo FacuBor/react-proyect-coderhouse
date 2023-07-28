@@ -2,22 +2,25 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 10px 0px;
-    gap: 10px;
+    justify-content: space-between;
+    padding: 15px 10px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    gap: 5px;
+    .card-img{
+        width:55% ;
+        height: 55%;
+        object-fit: contain;
+        object-position: center;
+    }
+    .btn-VerMas{
+        border-radius: 10px;
+        background-color: rgba(249, 141, 0, 0.763);
+        width: 60%;
+    }
+    .btn-VerMas:hover{
+        background-color: rgb(249, 141, 0);
+    }
 }
 
-.card-img{
-    width:60% ;
-    height: 45%;
-    object-fit: contain;
-    object-position: center;
-}
-.card-style h4{
-    font-size: 22px;
-    font-weight: 400;
-}
-.card-style p{
-    font-size: 17px;
-    font-weight: 400;
-}

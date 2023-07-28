@@ -2,12 +2,12 @@ import './ItemListContainer.scss'
 import { useProducts } from '../../hooks/useProducts'
 import { Aside } from '../Aside/Aside'
 import { ItemList } from '../ItemList/ItemList'
+import { Loader } from '../Loader/Loader'
 
 
 
 export const ItemListContainer = () =>{
-    const {loading} = useProducts()
-    const { products } = useProducts()
+    const { products, loading } = useProducts()
 
 
 
@@ -18,7 +18,7 @@ export const ItemListContainer = () =>{
             
             {
                 loading
-                    ? <h3 className='text-primary loadingText'>Cargando...</h3>
+                    ? <Loader/>
                     : <ItemList products={products} />
             }
             

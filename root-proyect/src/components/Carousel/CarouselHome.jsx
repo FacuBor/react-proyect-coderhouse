@@ -1,39 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import './Carouselhome.scss';
+import { imagenes } from './CarouselImage'; // array con imagenes
+import { useProducts } from '../../hooks/useProducts';
 
 export const CarouselHome =()=>{
-
-    const images = [
-        '/src/assets/img/gabinetes/gabinete__coolermaster.png',
-        '/src/assets/img/placas de video/asus__Rog--4070ti.png',
-        '/src/assets/img/procesadores/coreI9.png',
-        '/src/assets/img/perifericos/monitores/MonitorCurvoOdysseyArk--165hz--55.png',
-        '/src/assets/img/perifericos/mouse/logitech--superlight--Red.png',
-        '/src/assets/img/fuentes/corsair__1200w.png',
-        '/src/assets/img/almacenamiento/penDriveSanDisk 64.png',
-    ];
+    const { products, loading } = useProducts()
+    
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const nextSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % imagenes.length);
     };
     
     const prevSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + imagenes.length) % imagenes.length);
     };
     
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % imagenes.length);
         }, 4000);
         // Limpieza del intervalo cuando se desmonta el componente
         return () => clearInterval(interval);
-        }, [images.length]);
+        }, [imagenes.length]);
     
     return (
         <div className="carousel-container">
-            <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} className="slide" />
+            <img src={imagenes[currentIndex]} alt={`Image ${currentIndex + 1}`} className="slide" />
             <button onClick={prevSlide} className="btn-prev">P</button>
             <button onClick={nextSlide} className="btn-next">N</button>
         </div>

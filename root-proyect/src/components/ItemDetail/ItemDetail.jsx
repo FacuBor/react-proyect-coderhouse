@@ -1,6 +1,6 @@
 import './ItemDetail.scss'
 import { ItemCount } from '../ItemCount/ItemCount'
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
 import { Link } from 'react-router-dom'
@@ -18,7 +18,7 @@ export const ItemDetail = ({item}) =>{
         }
         agregarCarrito(newItem)
     }
-
+    const fecha = useMemo(() => new Date(), [])
 
     return(
         <div className='detailContainer d-flex justify-content-center align-items-center'>
@@ -33,10 +33,10 @@ export const ItemDetail = ({item}) =>{
                         isInCart(item.id)
                         ?   <Link className='btn btn-success align-self-center' to='/cart'>Terminar Compra</Link>
                         :   <ItemCount 
-                                stock={item.stock}
+                                max={item.stock}
                                 counter={counter}
                                 setCounter={setCounter}
-                                handleAgregar={handleAgregar}
+                                agregar={handleAgregar}
                             />
                     }
                     <Link className='btn btn-primary align-self-center' to="/itemList">Seguir comprando</Link>

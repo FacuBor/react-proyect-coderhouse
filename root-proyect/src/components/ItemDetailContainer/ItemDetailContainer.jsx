@@ -4,6 +4,9 @@ import { pedirDatos } from '../../helpers/pedirDatos'
 import './ItemDetailContainer.scss'
 import { useParams } from 'react-router-dom'
 import { ItemDetail } from '../ItemDetail/ItemDetail'
+import { Loader } from '../Loader/Loader'
+
+
 
 export const ItemDetailContainer = () =>{
     const [item, setItem] = useState(null)
@@ -29,7 +32,7 @@ export const ItemDetailContainer = () =>{
         <div className='itemDetailContainer'>
             {
                 loading
-                ? <h2>Cargando...</h2>
+                ?  <div className='divLoader'><Loader/></div>
                 : <ItemDetail item={item}/>
             }
         </div>

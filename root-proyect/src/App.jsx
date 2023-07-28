@@ -23,6 +23,7 @@ function App() {
                   <BrowserRouter >
                       
                       <Header />
+
                       <Routes>
                         <Route path='/' element={ <Home />} />
                         <Route path='/itemlist' element={ <ItemListContainer /> } />
@@ -32,6 +33,7 @@ function App() {
                         <Route path='/contact' element={ <Contact /> } />
                         <Route path='*' element={ <h2 className='text-danger'>Pagina no encontrada</h2> } />
                       </Routes>
+                      
                       <Footer/>
                       
                   </BrowserRouter>
