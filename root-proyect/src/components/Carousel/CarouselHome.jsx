@@ -1,33 +1,44 @@
 import React, { useState, useEffect } from 'react';
 import './Carouselhome.scss';
-import { imagenes } from './CarouselImage'; // array con imagenes
 import { useProducts } from '../../hooks/useProducts';
+import { Loader } from '../Loader/Loader';
 
 export const CarouselHome =()=>{
     const { products, loading } = useProducts()
-    
-
     const [currentIndex, setCurrentIndex] = useState(0);
 
+    useEffect(()=>{
+        const interval = setInterval(()=>{
+            const randomIndex = Math.floor(Math.random() * products.length);
+            setCurrentIndex(randomIndex)
+        }, 4000)
+
+        return ()=> clearInterval(interval);
+
+    },[products, currentIndex]);
+
+
+
     const nextSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % imagenes.length);
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % products.length);
     };
     
     const prevSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + imagenes.length) % imagenes.length);
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + products.length) % products.length);
     };
-    
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % imagenes.length);
-        }, 4000);
-        // Limpieza del intervalo cuando se desmonta el componente
-        return () => clearInterval(interval);
-        }, [imagenes.length]);
+
+    if(loading){
+        return <Loader/>
+    }
     
     return (
         <div className="carousel-container">
-            <img src={imagenes[currentIndex]} alt={`Image ${currentIndex + 1}`} className="slide" />
+            <div className='carousel-detail-container'>
+                <div className='carousel-image-container  row-image'>
+                    <img src={products[currentIndex].img} alt={`Image ${currentIndex + 1}`} className="imgCarousel" />
+                </div>
+                <h3 className='row-title m-0 fs-3 text-secondary'>{products[currentIndex].nombre}</h3>
+            </div>
             <button onClick={prevSlide} className="btn-prev">P</button>
             <button onClick={nextSlide} className="btn-next">N</button>
         </div>

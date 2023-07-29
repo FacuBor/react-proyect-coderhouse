@@ -20,6 +20,8 @@ export const ItemDetail = ({item}) =>{
     }
     const fecha = useMemo(() => new Date(), [])
 
+    
+
     return(
         <div className='detailContainer d-flex justify-content-center align-items-center'>
             <div className='detail-box'>

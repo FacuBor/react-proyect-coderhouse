@@ -14,15 +14,15 @@ import  logo9  from '/img/logos/msi-logo.png'
 export const HomeLogos = () =>{
     return(
         <div className='containerLogos'>
-            <div className='divLogos'><img src={logo1} alt=""/></div>
-            <div className='divLogos'><img src={logo2} alt=""/></div>
-            <div className='divLogos'><img src={logo3} alt=""/></div>
-            <div className='divLogos'><img src={logo4} alt=""/></div>
-            <div className='divLogos'><img src={logo5} alt=""/></div>
-            <div className='divLogos'><img src={logo6} alt=""/></div>
-            <div className='divLogos p-4'><img src={logo7} alt=""/></div>
-            <div className='divLogos p-3'><img src={logo8} alt=""/></div>
-            <div className='divLogos'><img src={logo9} alt=""/></div>
+            <div className='divLogo'><img src={logo1} alt=""/></div>
+            <div className='divLogo'><img src={logo2} alt=""/></div>
+            <div className='divLogo'><img src={logo3} alt=""/></div>
+            <div className='divLogo'><img src={logo4} alt=""/></div>
+            <div className='divLogo'><img src={logo5} alt=""/></div>
+            <div className='divLogo'><img src={logo6} alt=""/></div>
+            <div className='divLogo p-4'><img src={logo7} alt=""/></div>
+            <div className='divLogo p-3'><img src={logo8} alt=""/></div>
+            <div className='divLogo'><img src={logo9} alt=""/></div>
         </div>
     );
 }

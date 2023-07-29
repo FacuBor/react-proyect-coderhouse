@@ -13,23 +13,20 @@
     gap: 70px;
 }
 
-.divLogos {
+.divLogo {
     width: 200px; 
     height: 200px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: visible;
     border: 1px solid rgb(255, 255, 255);
 }
-.divLogos:hover{
-    border: 1px solid rgb(237, 237, 237);
-    overflow: hidden;
-}
 
-.divLogos img {
+.divLogo img {
     width: 100%;
     height: 100%;
-    object-fit: contain; 
-    object-position: center;
+    transition: scale 400ms;
+    object-fit: contain;
     
+}
+.divLogo:hover img{
+    scale: 120%;
 }

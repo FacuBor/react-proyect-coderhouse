@@ -69,3 +69,13 @@
         }
     }
 }
+
+.cart-Navbar-Icons{
+    display: flex;
+    justify-content: space-between;
+    min-height: max-content;
+    width: 120px;
+}
+.hiddenCart{
+    visibility: hidden;
+}
