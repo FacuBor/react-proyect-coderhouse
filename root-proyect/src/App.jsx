@@ -10,8 +10,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 import { DarkModeProvider } from './context/DarkModeContext';
 import { Cartview } from './components/Cart/CartView';
-
-
+import { ToastContainer } from "react-toastify"
 
 function App() {
 
@@ -21,8 +20,12 @@ function App() {
               <CartProvider>
                   
                   <BrowserRouter >
+
+                      <ToastContainer/> 
                       
                       <Header />
+
+                      
 
                       <Routes>
                         <Route path='/' element={ <Home />} />
@@ -35,6 +38,7 @@ function App() {
                       </Routes>
                       
                       <Footer/>
+                      
                       
                   </BrowserRouter>
                   

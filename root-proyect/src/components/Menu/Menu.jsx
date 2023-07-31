@@ -23,7 +23,7 @@ export const Menu = () =>{
     return(
         <div className={showMenu ? 'menu-active menuContainer ' : 'menuContainer'}>
                 <div className='cart-Navbar-Icons'>
-                    <div className={ cart.length === 0 ? "hiddenCart" : ''}>
+                    <div className={ cart.length === 0 ? "disabledCart" : ''}>
                         <CartWidget/>
                     </div>
                     <FaBars onClick={handleOpen} className='menuIcon' />

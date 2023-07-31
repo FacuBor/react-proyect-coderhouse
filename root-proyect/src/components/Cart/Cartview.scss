@@ -1,19 +1,41 @@
 .cartContainer{
     padding: 20px;
     width: 100%;
-    min-height: 100vh;
+    min-height: 90vh;
     display: grid;
     place-items: center;
     background-color: rgb(74, 76, 86);
+    .emptyCart{
+        background-color: rgb(237, 237, 237);
+        padding: 10px;
+        border-radius: 5px;
+        width: 30%;
+        height: 20%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        .btn-Return-Products{
+            width: 30%;
+            overflow: hidden;
+        }
+        .divLinks{
+            width: 100%;
+            height: max-content;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
     .cartDetail{
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 20px;
+        gap: 50px;
         padding: 20px;
         text-align: center;
-        width: 70%;
-        max-height: max-content;
+        width: 80%;
+        height: max-content;
         border-radius: 5px;
         background-color: rgb(237, 237, 237);
         .cartItem{
@@ -68,6 +90,7 @@
             background-color: rgb(255, 255, 255);
             border-radius: 5px;
         }
+        
     }
     
 }

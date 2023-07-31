@@ -15,11 +15,11 @@ export const ItemCount = ({max, counter, setCounter, agregar}) =>{
 
     return(
         <div className='countContainer'>
-            <div className='ms-3'>
+            <div className='m-0'>
 
                 <button onClick={handleRestar} className={`btn ${counter === 1? "btn-outline-danger" : "btn-outline-primary"}`} disabled={counter === 1}> - </button>
 
-                <span className='mx-2'>{counter}</span>
+                <span className='mx-3 my-0 fs-5 '>{counter}</span>
 
                 <button onClick={handleSumar} className={`btn ${counter == max ? "btn-outline-danger" : "btn-outline-primary"}`}  disabled={counter == max}> + </button>
 

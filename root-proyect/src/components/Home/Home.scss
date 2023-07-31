@@ -1,14 +1,15 @@
+@import '/src/variables/variables';
 .homeBody{
     width: 100%;
     height: max-content;
-    background-color: rgb(74, 76, 86);
+    background-color: $primary-color;
     padding: 20px 10%;
     .home-container{
         padding: 20px 10px;
         width: 100%;
         min-height: 1600px;
         height: max-content;
-        background-color: rgb(255, 255, 255);
+        background-color: $fifth-color;
         gap: 100px;
         display: flex;
         flex-direction: column;
@@ -17,7 +18,7 @@
         
     }
     .carouselContainer{
-        background-color: rgb(192, 192, 192);
+        background-color: $tertiary-color;
         width: 80%;
         height: 70%;
         display: grid;

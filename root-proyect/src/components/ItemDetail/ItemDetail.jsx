@@ -1,6 +1,6 @@
 import './ItemDetail.scss'
 import { ItemCount } from '../ItemCount/ItemCount'
-import { useState, useMemo } from 'react'
+import { useState} from 'react'
 import { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
 import { Link } from 'react-router-dom'
@@ -16,9 +16,8 @@ export const ItemDetail = ({item}) =>{
             ...item,
             counter
         }
-        agregarCarrito(newItem)
+        agregarCarrito(newItem);
     }
-    const fecha = useMemo(() => new Date(), [])
 
     
 

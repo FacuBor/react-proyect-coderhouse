@@ -17,7 +17,7 @@
         border-radius: 5px;
         overflow: hidden;
         .img-detail{
-            max-height: 50vh;
+            height: 40vh;
         }
         .detail-content{
             padding: 20px;
@@ -28,8 +28,9 @@
             border: .1px solid rgb(196, 196, 196);
             border-radius: 5px;
             width: 40%;
-            height: 100%;
-            overflow: hidden;
+            height: 80%;
+            overflow-x: hidden;
+        overflow-y: auto;
 
             .detail-title{
                 font-size: 35px;

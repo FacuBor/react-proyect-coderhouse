@@ -73,9 +73,10 @@
 .cart-Navbar-Icons{
     display: flex;
     justify-content: space-between;
-    min-height: max-content;
-    width: 120px;
+    gap: 2vw;
+    padding:10% 5%;
 }
-.hiddenCart{
-    visibility: hidden;
+.disabledCart{
+    pointer-events: none;
+    opacity: .3;
 }

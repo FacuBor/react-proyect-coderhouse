@@ -1,10 +1,14 @@
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react'
+import { useProducts } from '../../hooks/useProducts';
+import { Loader } from '../Loader/Loader';
 import './Contact.scss'
 
 
 
 export const Contact = () =>{
+
+    const { loading } = useProducts()
 
     const form = useRef()
 
@@ -19,7 +23,9 @@ export const Contact = () =>{
             });
             e.target.reset()
         };
-
+    if (loading){
+        return <Loader/>
+    }
 
     return(
         <div className="contactBody">
