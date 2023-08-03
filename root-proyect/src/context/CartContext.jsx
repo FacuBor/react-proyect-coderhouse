@@ -35,7 +35,6 @@ export const CartProvider = ({children})=>{
     const vaciarCart = () =>{
         setCart([])
         toast.error("Carrito vacio",{position: toast.POSITION.TOP_CENTER})
-        SweetAlert()
     }
     const totalCartItems = ()=>{
         return cart.reduce((acc, item) => acc + item.counter, 0)

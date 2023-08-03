@@ -1,11 +1,11 @@
 import { useEffect } from 'react'
 import { useState } from 'react'
-import { pedirDatos } from '../../helpers/pedirDatos'
 import './ItemDetailContainer.scss'
 import { useParams } from 'react-router-dom'
 import { ItemDetail } from '../ItemDetail/ItemDetail'
 import { Loader } from '../Loader/Loader'
-
+import { doc, getDoc } from 'firebase/firestore'
+import { dataBase } from '../../firebase/config'
 
 
 export const ItemDetailContainer = () =>{
@@ -15,20 +15,23 @@ export const ItemDetailContainer = () =>{
     const { itemId } = useParams()
 
     useEffect(()=>{
-        setLoading(true)
-
-
-        pedirDatos()
-        .then(r =>{
-            setItem( r.find(prod => prod.id === Number(itemId)) )
-        })
-        .finally(()=> setLoading(false))
-
-
+        window.scrollTo(0, 0);
     },[])
 
     useEffect(()=>{
-        window.scrollTo(0, 0);
+        setLoading(true)
+       //armo  referencia
+        const itemRef = doc(dataBase, "productos", itemId)
+       //llamo referencia
+        getDoc(itemRef)
+        .then((doc)=>{
+            setItem({
+                id: doc.id,
+                ...doc.data()
+            })
+        })
+        .catch(e=> console.log(e))
+        .finally(()=> setLoading(false))
     },[])
 
 

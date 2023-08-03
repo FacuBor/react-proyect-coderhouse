@@ -2,22 +2,18 @@ import { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
 import './Cartview.scss'
 import { FaTrashCan } from 'react-icons/fa6'
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 
 
-export const Cartview = ()=>{
+export const Cartview = ()=>{                              //traer el sweet alert aca,no usarlo como contexto
     const { cart, totalCompra, vaciarCart, deleteItemCart , SweetAlert } = useContext(CartContext)
     return(
         <div className='cartContainer'>
-            { cart.length === 0
+            { cart.length === 0              
                 ?   (<> 
                         <div className='emptyCart'>
-                                {SweetAlert()}
-                                <h2>Volver a... </h2>
-                                <div className='divLinks  '>
-                                    <Link className='btn btn-primary btn-Return-Products' to="/itemList"><p className='fs-6 m-0 fw-semibold'>Productos</p></Link>
-                                    <Link className='btn btn-primary btn-Return-Products' to="/"><p className='fs-6 m-0 fw-semibold'>Home</p></Link>
-                                </div>
+                                {SweetAlert()} 
+                                <Navigate to='/itemlist'/>  
                                 
                         </div>
                     </>
@@ -52,7 +48,7 @@ export const Cartview = ()=>{
                             <div className='d-flex justify-content-around mt-4'>
                                 <button onClick={vaciarCart} className='btn btn-warning'><p className='fs-6 m-0 fw-semibold'>Vaciar Carrito</p></button>
                                 <Link className='btn btn-primary ' to="/itemList"><p className='fs-6 m-0 fw-semibold'>Seguir Comprando</p></Link>
-                                
+                                <Link className='btn btn-success ' to="/checkout"><p className='fs-6 m-0 fw-semibold'>Confirmar Compra</p></Link>
                             </div>
                         </div>
                     </div>

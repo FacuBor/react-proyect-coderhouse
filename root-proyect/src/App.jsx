@@ -11,6 +11,7 @@ import { CartProvider } from './context/CartContext';
 import { DarkModeProvider } from './context/DarkModeContext';
 import { Cartview } from './components/Cart/CartView';
 import { ToastContainer } from "react-toastify"
+import { CheckOut } from './components/CheckOut/CheckOut'
 
 function App() {
 
@@ -20,13 +21,11 @@ function App() {
               <CartProvider>
                   
                   <BrowserRouter >
-
+                      
                       <ToastContainer/> 
                       
                       <Header />
-
                       
-
                       <Routes>
                         <Route path='/' element={ <Home />} />
                         <Route path='/itemlist' element={ <ItemListContainer /> } />
@@ -35,11 +34,10 @@ function App() {
                         <Route path='/cart' element={ <Cartview/> } />
                         <Route path='/contact' element={ <Contact /> } />
                         <Route path='*' element={ <h2 className='text-danger'>Pagina no encontrada</h2> } />
+                        <Route path='/checkout' element={ <CheckOut/> }/>
                       </Routes>
                       
                       <Footer/>
-                      
-                      
                   </BrowserRouter>
                   
               </CartProvider>

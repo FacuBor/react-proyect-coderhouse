@@ -1,3 +1,4 @@
+@import'/src/variables/variables';
 .card-style{
     display: flex;
     flex-direction: column;
@@ -8,7 +9,8 @@
     width: 100%;
     overflow: hidden;
     gap: 5px;
-    box-shadow: 1px 1px 5px  rgba(88, 88, 88, 0.335);
+    background-color: $fifth-color;
+    border-radius: 5px;
     .card-img{
         width:55% ;
         height: 55%;
@@ -17,7 +19,7 @@
     }
     .btn-VerMas{
         border-radius: 10px;
-        background-color: rgba(249, 141, 0, 0.763);
+        background-color: $secondary-color;
         width: 60%;
     }
     .btn-VerMas:hover{

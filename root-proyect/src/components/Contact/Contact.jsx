@@ -3,6 +3,8 @@ import { useRef } from 'react'
 import { useProducts } from '../../hooks/useProducts';
 import { Loader } from '../Loader/Loader';
 import './Contact.scss'
+import Swal from "sweetalert2";
+import { Navigate } from 'react-router-dom';
 
 
 
@@ -12,20 +14,31 @@ export const Contact = () =>{
 
     const form = useRef()
 
+    const SweetAlert = () =>{
+
+        Swal.fire({
+            icon: 'success',
+            title: 'Mensaje enviado',
+            text: 'Gracias por contactarte, espere se respuesta!',
+            confirmButtonText: 'BYE'
+        });
+    }
+
     const sendEmail = (e) => {
         e.preventDefault();
     
         emailjs.sendForm('service_gc9i73k', 'template_ll3tbsw', form.current, 'r9DxNrJgEwkNl7DmH')
             .then((result) => {
+                SweetAlert()
                 console.log(result.text);
             }, (error) => {
                 console.log(error.text);
             });
-            e.target.reset()
+            e.target.reset();
         };
     if (loading){
         return <Loader/>
-    }
+    }//chekear si es necesario sino sacarlo
 
     return(
         <div className="contactBody">
