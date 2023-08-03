@@ -2,32 +2,47 @@ import './CheckOut.scss'
 import { useState } from 'react';
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
-import { collection, addDoc, updateDoc, getDoc, doc } from 'firebase/firestore'
+import { collection, getDocs, addDoc, updateDoc, getDoc, doc, writeBatch, query, where, documentId } from 'firebase/firestore'
 import { dataBase } from '../../firebase/config.js'
 import { Link } from 'react-router-dom'
+import { Formik, Form, Field, ErrorMessage } from'formik'
+import * as Yup from 'yup'
+
+
+const validationSchema = Yup.object().shape({
+    nombre: Yup.string()
+        .min(5, 'Minimo 5 caracteres')
+        .max(20, 'Maximo 20 caracteres')
+        .required('Este campo es obligatorio!'),
+    direccion: Yup.string()
+        .min(5, 'Minimo 5 caracteres')
+        .max(50, 'Maximo 50 caracteres')
+        .required('Este campo es obligatorio!'),
+    email: Yup.string()
+        .email('Email invalido')
+        .required('Este campo es obligatorio!'),
+
+})
+
+
+
+
+
+
 
 export const CheckOut = ()=>{
 
     const { cart, totalCompra, vaciarCart} = useContext(CartContext)
 
+    const [loading, setLoading] = useState(false)
     const [ordenId, setOrdenId] = useState(null)
-    const [values , setValues] = useState({
-        nombre: '',
-        direccion: '',
-        email:'',
-    })
 
 
-    const handleInputChange = (e) =>{
-        setValues({
-            ...values,
-            [e.target.name]: e.target.value
-        })
-    }
 
 
-    const handleSubmit = (e) =>{
-        e.preventDefault();
+    const handleSubmit = async (values) =>{
+        
+        setLoading(true)
 
         const ordenCompra = {
             cliente: values,
@@ -36,46 +51,47 @@ export const CheckOut = ()=>{
             FyH: new Date()
         }
         console.log(ordenCompra)
-
+        console.log( cart.map(item => item.id))
         //enviar a firebase
-        
-        ordenCompra.items.forEach(item => {
+        const batch = writeBatch(dataBase)
+        const ordenCompraRef = collection(dataBase, 'orders')
+        const productosRef = collection (dataBase, 'productos')
+        const q =query( productosRef, where( documentId(), 'in', cart.map(item => item.id) ))
 
-            const docRef = doc(dataBase, "productos", item.id)
-            getDoc(docRef)
-                .then((doc)=>{
-                    
-                    const stock = doc.data().stock
-                    
-                    if (stock >= item.cantidad){
-                        updateDoc(docRef,{
-                            stock: stock- item.cantidad
-                        })
-                    }else{
-                        alert("no hay stock de " + item.nombre)
-                    }
-                    
+        const productos = await getDocs(q)
+        const outOfStock = []
+
+        productos.docs.forEach( (doc)=> {
+            const item = cart.find(prod => prod.id === doc.id)
+            const stock = doc.data().stock
+
+            if(stock >= item.counter){
+                batch.update(doc.ref, {
+                    stock: stock - item.counter
+                })
+            } else{
+                outOfStock.push(item)
+            }
         })
 
+        if(outOfStock.length === 0){
+            await batch.commit()
+            const doc = await addDoc(ordenCompraRef, ordenCompra)
 
-
-
-        /*  const ordenCompraRef = collection(dataBase, 'orders')
-        addDoc(ordenCompraRef, ordenCompra)
-        .then((doc)=>{
-            console.log(doc.id)
-            vaciarCart() 
-            //sweetalert
+            vaciarCart()
+            //sweet alert
             setOrdenId(doc.id)
+        }else{
+            alert("no hay stock de un producto")
+            console.log(outOfStock + 'sin stock!')
+        }
+
+        setLoading(false)
+
+    }
 
 
-        })
-         */
 
-    })
-
-
-}  
 
 
 
@@ -99,37 +115,32 @@ export const CheckOut = ()=>{
         <div className='checkOut-container'>
             <h2>Para terminar tu compra es necesario</h2>
             <div className='checkOut-formContainer'>
-                
-                <form onSubmit={handleSubmit}>
-                    <input
-                    required
-                    onChange={handleInputChange} 
-                    value={values.nombre}
-                    type="text" 
-                    className='form-control my-2'
-                    placeholder='Nombre y Apellido'
-                    name='nombre'
-                    />
-                    <input
-                    required
-                    onChange={handleInputChange}
-                    value={values.direccion}
-                    type="text" 
-                    className='form-control my-2'
-                    placeholder='Direccion'
-                    name='direccion'
-                    />
-                    <input
-                    required
-                    onChange={handleInputChange} 
-                    value={values.email}
-                    type="email" 
-                    className='form-control my-2'
-                    placeholder='Email'
-                    name='email'
-                    />
-                    <button className='btn btn-success' type='submit' >Enviar Compra</button>
-                </form>
+                <Formik
+                    initialValues={{
+                        nombre: '',
+                        direccion: '',
+                        email:''
+                    }}
+                    onSubmit={handleSubmit} 
+                    validationSchema={validationSchema}
+                >
+
+
+                    { 
+                        ()=>(
+                            <Form className='form-container'>
+                                <Field placeholder="Nombre y Apellido" className='form-input' type="text" name="nombre" />
+                                <ErrorMessage className='m-0 ' name='nombre' component="p"/>
+                                <Field placeholder="Direccion" className='form-input' type="text" name="direccion" />
+                                <ErrorMessage className='m-0 ' name='direccion' component="p"/>
+                                <Field placeholder="Email" className='form-input' type="email" name="email" />
+                                <ErrorMessage className='m-0 ' name='email' component="p"/>
+                                <button type='submit' disabled={loading} className='btn btn-success'>Enviar Compra</button>
+                            </Form>
+                    )}
+
+
+                </Formik>
             </div>
         </div>
     )

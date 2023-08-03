@@ -10,9 +10,21 @@
     
     .checkOut-formContainer{
         border: 1px solid red;
-        padding: 10px 10%;
+        padding: 5% 5%;
         width: 60%;
         height: 70%;
+        .form-container{
+            width: 100%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: flex-start;
+            gap: 5px;
+            .form-input{
+                width: 80%;
+            }
+        }
     }
 }
 .orden-container{

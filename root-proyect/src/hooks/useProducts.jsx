@@ -6,7 +6,6 @@ import { dataBase } from "../firebase/config"
 export const useProducts = () =>{
     const[products, setProducts] = useState([])
     const[loading, setLoading] = useState(true)
-    console.log(products)
     const { categoryId } = useParams()
         
 
