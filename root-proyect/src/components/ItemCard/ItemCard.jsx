@@ -11,7 +11,7 @@ export const ItemCard = ({item}) =>{
                             item.stock<= 5 && <p className='text-danger fs-6 m-0'>Quedan {item.stock} unidades</p>
                         }
                         <p  className='m-0'>Precio: ${item.precio}</p>
-                        <Link to={`/detail/${item.id}`} className='btn btn-VerMas'>Ver mas...</Link>
+                        <Link to={`/detail/${item.id}`} className='btn-VerMas'>Ver mas...</Link>
             </div>
                         
         </div>

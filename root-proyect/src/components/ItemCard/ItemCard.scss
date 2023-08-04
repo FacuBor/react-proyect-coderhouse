@@ -7,20 +7,30 @@
     padding: 15px 10px;
     height: 100%;
     width: 100%;
-    overflow: hidden;
+    overflow: visible;
     gap: 5px;
-    background-color: $fifth-color;
+    background-color: rgb(255, 255, 255);
     border-radius: 5px;
     .card-img{
-        width:55% ;
-        height: 55%;
+        width:60% ;
+        height: 60%;
         object-fit: contain;
         object-position: center;
+        transition: scale 400ms;
+    }
+    .card-img:hover{
+        scale: 110%;
     }
     .btn-VerMas{
         border-radius: 10px;
-        background-color: $secondary-color;
+        background-color: rgba(249, 141, 0, 0.829);
         width: 60%;
+        text-decoration: none;
+        text-align: center;
+        padding: 3% 5%;
+        font-size: 18px;
+        font-weight: 600;
+        color: rgb(74, 76, 86);
     }
     .btn-VerMas:hover{
         background-color: rgb(249, 141, 0);

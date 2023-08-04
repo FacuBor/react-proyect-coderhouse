@@ -3,25 +3,41 @@ import { CartContext } from '../../context/CartContext'
 import './Cartview.scss'
 import { FaTrashCan } from 'react-icons/fa6'
 import { Link, Navigate } from 'react-router-dom';
+import Swal from "sweetalert2";
 
 
 export const Cartview = ()=>{                              //traer el sweet alert aca,no usarlo como contexto
-    const { cart, totalCompra, vaciarCart, deleteItemCart , SweetAlert } = useContext(CartContext)
+    const { cart, totalCompra, vaciarCart, deleteItemCart  } = useContext(CartContext)
+
+    const SweetAlert = () =>{
+
+        Swal.fire({
+            icon: 'info',
+            title: 'Oops...',
+            text: 'Your Cart is empty, add products',
+            confirmButtonText: 'OKEY'
+        });
+    }
+
     return(
         <div className='cartContainer'>
             { cart.length === 0              
                 ?   (<> 
-                        <div className='emptyCart'>
+                        
                                 {SweetAlert()} 
                                 <Navigate to='/itemlist'/>  
                                 
-                        </div>
+                        
                     </>
                     ) 
 
                 : ( <div className='cartDetail'>
                     
-                        <h2 className='fs-1 text-secondary'>Tus Compras</h2>
+                        <h2 className='fs-2 text-secondary'>TU CARRITO DE COMPRAS</h2>
+
+
+
+
                         
                         {
                             cart.map((item) =>(
@@ -30,12 +46,12 @@ export const Cartview = ()=>{                              //traer el sweet aler
                                             <img className='cartImg ' src={item.img} alt={item.nombre} />
                                         </div>
                                         <div className='divItemDetail'>
-                                            <h3 className='fs-2'>{item.nombre}</h3>
+                                            <h3 className='fs-2 titleItem'>{item.nombre}</h3>
                                             <div>
                                                 <p className='fs-6'>Precio Unidad: ${item.precio}</p>
                                                 <p className='fs-6'>Cantidad: {item.counter}</p>
                                             </div>
-                                            <p className='fw-semibold fs-5'>Total: ${item.precio * item.counter}</p>
+                                            <p className='fw-semibold totalItem fs-5'>Total: ${item.precio * item.counter}</p>
                                         </div>
                                         <div className='divDeleteItem d-flex justify-content-end'>
                                             <FaTrashCan className='btnDeleteItem' onClick={() => deleteItemCart(item.id)}/>
@@ -43,12 +59,15 @@ export const Cartview = ()=>{                              //traer el sweet aler
                                 </div>
                             ))
                         }
+
+
+
                         <div className='divCartTotalCompra '>
-                            <h4 className='text-secondary'>TOTAL DE TU COMPRA: ${totalCompra()}</h4>
+                            <h4 className='totalCompra-Text'>TOTAL DE TU COMPRA: ${totalCompra()}</h4>
                             <div className='d-flex justify-content-around mt-4'>
-                                <button onClick={vaciarCart} className='btn btn-warning'><p className='fs-6 m-0 fw-semibold'>Vaciar Carrito</p></button>
-                                <Link className='btn btn-primary ' to="/itemList"><p className='fs-6 m-0 fw-semibold'>Seguir Comprando</p></Link>
-                                <Link className='btn btn-success ' to="/checkout"><p className='fs-6 m-0 fw-semibold'>Confirmar Compra</p></Link>
+                                <button onClick={vaciarCart} className='btn-style btn-Vaciar'><p className='fs-6 m-0 fw-semibold'>Vaciar Carrito</p></button>
+                                <Link className='btn-style btn-SeguirCompr' to="/itemList"><p className='fs-6 m-0 fw-semibold'>Seguir Comprando</p></Link>
+                                <Link className='btn-style btn-Confirm' to="/checkout"><p className='fs-6 m-0 fw-semibold'>Confirmar Compra</p></Link>
                             </div>
                         </div>
                     </div>

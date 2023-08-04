@@ -36,21 +36,17 @@ export const Contact = () =>{
             });
             e.target.reset();
         };
-    if (loading){
-        return <Loader/>
-    }//chekear si es necesario sino sacarlo
-
     return(
         <div className="contactBody">
             <div className='contactContainer'>
                 <div className='detailContainer text-center p-3 d-flex flex-column align-items-center justify-content-center'>
                     <form ref={form} onSubmit={sendEmail} className='formControlCard'>
-                        <h2 className='text-secondary m-0'>Contact Me</h2>
+                        <h2 className='text-secondary m-0'>Contáctanos</h2>
                         <input className='input' type="text" placeholder='Nombre Completo' name='user_name' required />
                         <input className='input' type="email" placeholder='Email' name='user_email' required />
                         <input className='input' type="text" placeholder='Motivo' name='subject' required />
                         <textarea className='textArea' placeholder='Escriba...' name="message"  cols="30" rows="10"></textarea>
-                        <button type="submit" className='btn btn-success'>ENVIAR MENSAJE</button>
+                        <button type="submit" className='btn-Send'>ENVIAR MENSAJE</button>
                         <p className='fs-6 m-0 align-self-end text-secondary'>@emailJS</p>
                     </form>
                     

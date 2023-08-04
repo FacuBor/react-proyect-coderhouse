@@ -1,7 +1,7 @@
 import { createContext } from "react";
 import { useState } from 'react';
 import { toast } from "react-toastify";
-import Swal from "sweetalert2";
+
 
 
 
@@ -10,21 +10,13 @@ export const CartContext = createContext()
 export const CartProvider = ({children})=>{
 
 
-    const SweetAlert = () =>{
-
-        Swal.fire({
-            icon: 'info',
-            title: 'Oops...',
-            text: 'Your Cart is empty, add products',
-            confirmButtonText: 'OKEY'
-        });
-    }
+    
     const [cart, setCart] = useState([])
     
     const agregarCarrito = (item) =>{
         setCart([...cart, item]);
 
-        toast.success("Producto agregado",{position: toast.POSITION.TOP_CENTER}) 
+        toast.success("Producto agregado",{position: toast.POSITION.TOP_LEFT}) 
     }
     const isInCart = (id) =>{
         return cart.some((item)=> item.id === id)
@@ -34,7 +26,7 @@ export const CartProvider = ({children})=>{
     }
     const vaciarCart = () =>{
         setCart([])
-        toast.error("Carrito vacio",{position: toast.POSITION.TOP_CENTER})
+        toast.error("Carrito vacio",{position: toast.POSITION.TOP_RIGHT})
     }
     const totalCartItems = ()=>{
         return cart.reduce((acc, item) => acc + item.counter, 0)
@@ -44,7 +36,7 @@ export const CartProvider = ({children})=>{
         toast.warn("Producto eliminado",{position: toast.POSITION.TOP_CENTER})
     }
     return(
-        <CartContext.Provider value={{cart, agregarCarrito, isInCart, totalCompra, vaciarCart, totalCartItems, deleteItemCart,SweetAlert}}>
+        <CartContext.Provider value={{cart, agregarCarrito, isInCart, totalCompra, vaciarCart, totalCartItems, deleteItemCart}}>
             {children}
         </CartContext.Provider>
     )

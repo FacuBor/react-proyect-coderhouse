@@ -1,19 +1,49 @@
-@import'/src/variables/variables';
+
 .countContainer{
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
     .addButton{
-        padding: 2% 5%;
+        color: rgb(74, 76, 86);
+        background-color: rgba(249, 141, 0, 0.738);
+        border-radius: 5px;
+        width: 30%;
+        text-decoration: none;
         text-align: center;
-        align-self: center;
+        padding: 1% 1%;
+        font-size: 18px;
+        font-weight: 500;
+        border: none;
+        margin: 0 auto;
     }
+    .addButton:hover{
+        background-color: rgb(225, 127, 0);
+    }
+
+
+
     .btnCount{
         padding: 5px 20px;
         width: max-content;
         height: max-content;
         text-align: center;
+        border-radius: 5px;
+        border: none;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid rgb(255, 255, 255);
+        font-weight: 600;
         
+    }
+    .btnCount-danger{
+        background-color: rgba(249, 132, 132, 0.401);
+        border: 1px solid rgba(255, 2, 2, 0.379);
+    }
+    .btnCount-primary{
+        background-color: rgba(0, 255, 110, 0.864);
+        border: 1px solid rgb(206, 206, 206);
+    }
+    .btnCount-primary:hover{
+        background-color: rgb(0, 219, 95);
     }
 }

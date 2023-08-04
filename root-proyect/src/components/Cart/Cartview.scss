@@ -5,34 +5,13 @@
     display: grid;
     place-items: center;
     background-color: rgb(74, 76, 86);
-    .emptyCart{
-        background-color: rgb(237, 237, 237);
-        padding: 10px;
-        border-radius: 5px;
-        width: 30%;
-        height: 20%;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        .btn-Return-Products{
-            width: 30%;
-            overflow: hidden;
-        }
-        .divLinks{
-            width: 100%;
-            height: max-content;
-            display: flex;
-            justify-content: space-evenly;
-        }
-    }
+    
     .cartDetail{
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 50px;
-        padding: 20px;
+        gap: 30px;
+        padding: 40px 20px;
         text-align: center;
         width: 80%;
         height: max-content;
@@ -42,6 +21,7 @@
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
+            align-items: center;
             width: 80%;
             height: 30vh;
             background-color: rgb(255, 255, 255);
@@ -49,27 +29,35 @@
             padding: 5px;
             gap: 5px;
             .divImgCart{
+                width: 40%;
+                height: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 40%;
-                max-height: 100%;
+                overflow: visible;
                 .cartImg{
-                    max-width: 100%;
-                    max-height: 100%;
+                    min-width: 70%;
+                    max-height: 70%;
+                    object-fit: contain;
+                    object-position: center;
                 }
             }
             .divItemDetail{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                gap: 20px;
                 width: 40%;
+                height: 90%;
                 background-color: rgb(237, 237, 237);
                 border-radius: 5px;
-                
+                overflow: hidden;
             }
-            
+            .titleItem{
+                color:rgba(0, 55, 255, 0.757);
+            }
+            .totalItem{
+                color: rgb(22, 191, 0);
+            }
             .divDeleteItem{
                 width: 20%;
                 padding: 15px;
@@ -89,6 +77,36 @@
             padding: 20px;
             background-color: rgb(255, 255, 255);
             border-radius: 5px;
+            .btn-style{
+                text-decoration: none;
+                border: none;
+                width: 15%;
+                font-weight: 600;
+                padding: 10px 10px;
+                border-radius: 5px;
+                color: rgb(74, 76, 86);
+                text-align: center;
+            }
+            .btn-Vaciar{
+                background-color: rgba(218, 102, 25, 0.694);
+            } 
+            .btn-Vaciar:hover{
+                background-color: rgba(255, 102, 0, 0.861)
+            }
+            .btn-SeguirCompr{
+                background-color: rgba(0, 55, 255, 0.785);
+                color: rgb(255, 255, 255);
+            }
+            .btn-SeguirCompr:hover{
+                background-color: rgba(0, 55, 255, 0.949);
+            }
+            .btn-Confirm{
+                background-color: rgba(0, 255, 110, 0.785);
+            }
+            .btn-Confirm:hover{
+                background-color: rgb(1, 201, 88);
+            }
+            
         }
         
     }

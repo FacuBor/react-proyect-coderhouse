@@ -50,8 +50,6 @@ export const CheckOut = ()=>{
             totalCompra: totalCompra(),
             FyH: new Date()
         }
-        console.log(ordenCompra)
-        console.log( cart.map(item => item.id))
         //enviar a firebase
         const batch = writeBatch(dataBase)
         const ordenCompraRef = collection(dataBase, 'orders')
@@ -99,12 +97,14 @@ export const CheckOut = ()=>{
     if (ordenId) {
         return(
             <div className='orden-container'>
-                <div>
-                    <h2>Tu compra se registro exitosamente!!</h2>
-                    <p>tu numero de orden es: <strong>{ordenId}</strong></p>
-                    <p>Guarde este codigo!</p>
-                    <Link className='btn btn-primary' to='/'>Volver a Inico</Link>
-                    <Link className='btn btn-primary' to='/contact'>Ir a contacto</Link>
+                <div className='orden-content'>
+                    <h2 className='orden-title'>Tu compra se registro exitosamente!!</h2>
+                    <p className='orden-Id'>Tu numero de compra es: <strong>{ordenId}</strong></p>
+                    <p>Recibira en su Email un resumen de su compra y Metodos de pago! Guarde este codigo!</p>
+                    <div className='orden-buttons'>
+                        <Link className='btn btn-primary' to='/'>Volver a Inico</Link>
+                        <Link className='btn btn-primary' to='/contact'>Contáctanos</Link>
+                    </div>
                 </div>
             </div>   //crear componente orderdetail orderId={orderId}
         )
@@ -113,7 +113,7 @@ export const CheckOut = ()=>{
 
     return(
         <div className='checkOut-container'>
-            <h2>Para terminar tu compra es necesario</h2>
+            
             <div className='checkOut-formContainer'>
                 <Formik
                     initialValues={{
@@ -129,12 +129,13 @@ export const CheckOut = ()=>{
                     { 
                         ()=>(
                             <Form className='form-container'>
+                                <h2>Complete para terminar su compra!</h2>
                                 <Field placeholder="Nombre y Apellido" className='form-input' type="text" name="nombre" />
-                                <ErrorMessage className='m-0 ' name='nombre' component="p"/>
+                                <ErrorMessage className='m-0'  name='nombre' component="p"/>
                                 <Field placeholder="Direccion" className='form-input' type="text" name="direccion" />
-                                <ErrorMessage className='m-0 ' name='direccion' component="p"/>
+                                <ErrorMessage className='m-0'  name='direccion' component="p"/>
                                 <Field placeholder="Email" className='form-input' type="email" name="email" />
-                                <ErrorMessage className='m-0 ' name='email' component="p"/>
+                                <ErrorMessage className='m-0'  name='email' component="p"/>
                                 <button type='submit' disabled={loading} className='btn btn-success'>Enviar Compra</button>
                             </Form>
                     )}

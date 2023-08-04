@@ -22,7 +22,7 @@ export const ItemDetail = ({item}) =>{
     
 
     return(
-        <div className='detailContainer d-flex justify-content-center align-items-center'>
+        <div className='detailContainer '>
             <div className='detail-box'>
                 <img className='img-detail' src={item.img} alt={item.nombre} />
                 <div className='detail-content'>
@@ -32,7 +32,7 @@ export const ItemDetail = ({item}) =>{
                     
                     {
                         isInCart(item.id)
-                        ?   <Link className='btn btn-success align-self-center' to='/cart'>Terminar Compra</Link>
+                        ?   <Link className='btn-TerminarCompra' to='/cart'>Terminar Compra</Link>
                         :   <ItemCount 
                                 max={item.stock}
                                 counter={counter}
@@ -40,7 +40,8 @@ export const ItemDetail = ({item}) =>{
                                 agregar={handleAgregar}
                             />
                     }
-                    <Link className='btn btn-primary align-self-center' to="/itemList">Seguir comprando</Link>
+                    
+                    <Link className='btn-SeguirComprando' to="/itemList">Seguir comprando</Link>
                 </div>
             </div>
         </div>
