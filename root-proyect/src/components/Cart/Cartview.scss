@@ -17,6 +17,9 @@
         height: max-content;
         border-radius: 5px;
         background-color: rgb(237, 237, 237);
+        h2{
+            color: rgb(204, 116, 0);
+        }
         .cartItem{
             display: flex;
             flex-direction: row;
@@ -74,13 +77,18 @@
         }
         .divCartTotalCompra{
             width: 80%;
+            height: 20vh;
             padding: 20px;
             background-color: rgb(255, 255, 255);
             border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             .btn-style{
                 text-decoration: none;
                 border: none;
-                width: 15%;
+                width: 20%;
+                height: max-content;
                 font-weight: 600;
                 padding: 10px 10px;
                 border-radius: 5px;
@@ -88,23 +96,23 @@
                 text-align: center;
             }
             .btn-Vaciar{
-                background-color: rgba(218, 102, 25, 0.694);
+                background-color: rgba(249, 141, 0, 0.829);
             } 
             .btn-Vaciar:hover{
-                background-color: rgba(255, 102, 0, 0.861)
+                background-color: rgb(249, 141, 0);
             }
             .btn-SeguirCompr{
-                background-color: rgba(0, 55, 255, 0.785);
+                background-color: rgba(0, 55, 255, 0.935);
                 color: rgb(255, 255, 255);
             }
             .btn-SeguirCompr:hover{
-                background-color: rgba(0, 55, 255, 0.949);
+                background-color: rgba(0, 55, 255, 0.801);
             }
             .btn-Confirm{
-                background-color: rgba(0, 255, 110, 0.785);
+                background-color: rgb(19, 187, 0);
             }
             .btn-Confirm:hover{
-                background-color: rgb(1, 201, 88);
+                background-color: rgb(20, 204, 0);
             }
             
         }

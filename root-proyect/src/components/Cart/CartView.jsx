@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { CartContext } from '../../context/CartContext'
 import './Cartview.scss'
 import { FaTrashCan } from 'react-icons/fa6'
@@ -9,12 +9,16 @@ import Swal from "sweetalert2";
 export const Cartview = ()=>{                              //traer el sweet alert aca,no usarlo como contexto
     const { cart, totalCompra, vaciarCart, deleteItemCart  } = useContext(CartContext)
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const SweetAlert = () =>{
 
         Swal.fire({
             icon: 'info',
             title: 'Oops...',
-            text: 'Your Cart is empty, add products',
+            text: 'Tu carrito esta vacio, agregue productos!',
             confirmButtonText: 'OKEY'
         });
     }
@@ -33,7 +37,7 @@ export const Cartview = ()=>{                              //traer el sweet aler
 
                 : ( <div className='cartDetail'>
                     
-                        <h2 className='fs-2 text-secondary'>TU CARRITO DE COMPRAS</h2>
+                        <h2 className='fs-2 '>TU CARRITO DE COMPRAS</h2>
 
 
 

@@ -24,9 +24,23 @@
             justify-content:space-evenly;
             align-items: center;
             border-radius: 5px;
-            border: 1px solid rgb(225, 225, 225);
+            border: 1px solid rgb(204, 116, 0);
+            h2{
+                color:rgb(204, 116, 0);
+            }
             .form-input{
                 width: 80%;
+            }
+            .btn-EnviarCompra{
+                border: none;
+                border-radius: 5px;
+                font-weight: 600;
+                width: 20%;
+                padding: 10px 15px;
+                background-color: rgb(18, 177, 0);
+            }
+            .btn-EnviarCompra:hover{
+                background-color: rgb(20, 197, 0);
             }
         }
     }

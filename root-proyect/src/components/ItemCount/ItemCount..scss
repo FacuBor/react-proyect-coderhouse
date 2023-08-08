@@ -6,19 +6,18 @@
     gap: 20px;
     .addButton{
         color: rgb(74, 76, 86);
-        background-color: rgba(249, 141, 0, 0.738);
+        background-color: rgba(249, 141, 0, 0.829);
         border-radius: 5px;
-        width: 30%;
+        width:max-content;
         text-decoration: none;
-        text-align: center;
-        padding: 1% 1%;
+        padding: 10px 20px;
         font-size: 18px;
         font-weight: 500;
         border: none;
         margin: 0 auto;
     }
     .addButton:hover{
-        background-color: rgb(225, 127, 0);
+        background-color: rgb(249, 141, 0);
     }
 
 

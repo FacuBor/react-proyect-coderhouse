@@ -30,18 +30,19 @@ export const ItemDetail = ({item}) =>{
                     <p className='detail-description text-secondary'>{item.descripcion}</p>
                     <p className='detail-price fw-semibold fs-5'>Precio:$ {item.precio * counter}</p>
                     
-                    {
-                        isInCart(item.id)
-                        ?   <Link className='btn-TerminarCompra' to='/cart'>Terminar Compra</Link>
-                        :   <ItemCount 
-                                max={item.stock}
-                                counter={counter}
-                                setCounter={setCounter}
-                                agregar={handleAgregar}
-                            />
-                    }
-                    
-                    <Link className='btn-SeguirComprando' to="/itemList">Seguir comprando</Link>
+                    {isInCart(item.id) 
+                                ? (<Link className='btn-TerminarCompra' to='/cart'>Terminar Compra</Link>) 
+                                : (<div className='itemCountContainer'>  
+                                        {item.stock <= 0 
+                                                ? (<p className='text-danger '>No hay stock disponible</p>) 
+                                                : (<ItemCount 
+                                                        max={item.stock}      
+                                                        counter={counter}      
+                                                        setCounter={setCounter}      
+                                                        agregar={handleAgregar}/>)
+                                        }
+                                    </div>)}
+                                    <Link className='btn-SeguirComprando' to='/itemList'>Seguir comprando</Link>
                 </div>
             </div>
         </div>

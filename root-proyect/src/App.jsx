@@ -12,6 +12,7 @@ import { DarkModeProvider } from './context/DarkModeContext';
 import { Cartview } from './components/Cart/CartView';
 import { ToastContainer } from "react-toastify"
 import { CheckOut } from './components/CheckOut/CheckOut'
+import { Error404 } from './components/Error404/Error404'
 
 function App() {
 
@@ -33,7 +34,7 @@ function App() {
                         <Route path='/detail/:itemId' element= { <ItemDetailContainer/> } />
                         <Route path='/cart' element={ <Cartview/> } />
                         <Route path='/contact' element={ <Contact /> } />
-                        <Route path='*' element={ <h2 className='text-danger'>Pagina no encontrada</h2> } />
+                        <Route path='*' element={ <Error404/> } />
                         <Route path='/checkout' element={ <CheckOut/> }/>
                       </Routes>
                       

@@ -98,12 +98,12 @@ export const CheckOut = ()=>{
         return(
             <div className='orden-container'>
                 <div className='orden-content'>
-                    <h2 className='orden-title'>Tu compra se registro exitosamente!!</h2>
-                    <p className='orden-Id'>Tu numero de compra es: <strong>{ordenId}</strong></p>
-                    <p>Recibira en su Email un resumen de su compra y Metodos de pago! Guarde este codigo!</p>
+                    <h2 className='orden-title'>Su compra se registro exitosamente!!</h2>
+                    <p className='orden-Id'>Su numero de compra es: <strong>{ordenId}</strong></p>
+                    <p>Recibira en su Email un resumen de su compra y metodos de pago! Guarde este codigo!</p>
                     <div className='orden-buttons'>
                         <Link className='btn btn-primary' to='/'>Volver a Inico</Link>
-                        <Link className='btn btn-primary' to='/contact'>Contáctanos</Link>
+                        <Link className='btn btn-primary' to='/contact'>Ir a Contacto</Link>
                     </div>
                 </div>
             </div>   //crear componente orderdetail orderId={orderId}
@@ -136,7 +136,7 @@ export const CheckOut = ()=>{
                                 <ErrorMessage className='m-0'  name='direccion' component="p"/>
                                 <Field placeholder="Email" className='form-input' type="email" name="email" />
                                 <ErrorMessage className='m-0'  name='email' component="p"/>
-                                <button type='submit' disabled={loading} className='btn btn-success'>Enviar Compra</button>
+                                <button type='submit' disabled={loading} className='btn-EnviarCompra'>Enviar Compra</button>
                             </Form>
                     )}
 

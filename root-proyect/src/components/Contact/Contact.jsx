@@ -41,7 +41,7 @@ export const Contact = () =>{
             <div className='contactContainer'>
                 <div className='detailContainer text-center p-3 d-flex flex-column align-items-center justify-content-center'>
                     <form ref={form} onSubmit={sendEmail} className='formControlCard'>
-                        <h2 className='text-secondary m-0'>Contáctanos</h2>
+                        <h2 className='text-secondary m-0'>Contacto</h2>
                         <input className='input' type="text" placeholder='Nombre Completo' name='user_name' required />
                         <input className='input' type="email" placeholder='Email' name='user_email' required />
                         <input className='input' type="text" placeholder='Motivo' name='subject' required />
