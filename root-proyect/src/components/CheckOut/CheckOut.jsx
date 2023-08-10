@@ -7,6 +7,7 @@ import { dataBase } from '../../firebase/config.js'
 import { Link } from 'react-router-dom'
 import { Formik, Form, Field, ErrorMessage } from'formik'
 import * as Yup from 'yup'
+import Swal from "sweetalert2";
 
 
 const validationSchema = Yup.object().shape({
@@ -26,7 +27,15 @@ const validationSchema = Yup.object().shape({
 
 
 
+const SweetAlert = () =>{
 
+    Swal.fire({
+        icon: 'success',
+        title: 'Enviado',
+        text: 'Gracias por tu compra',
+        confirmButtonText: 'BYE'
+    });
+}
 
 
 
@@ -77,7 +86,7 @@ export const CheckOut = ()=>{
             const doc = await addDoc(ordenCompraRef, ordenCompra)
 
             vaciarCart()
-            //sweet alert
+            SweetAlert()
             setOrdenId(doc.id)
         }else{
             alert("no hay stock de un producto")

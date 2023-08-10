@@ -1,21 +1,13 @@
-import emailjs from '@emailjs/browser';
-import { useRef } from 'react'
+import './Contact.scss';
+import { useRef } from 'react';
 import { useProducts } from '../../hooks/useProducts';
-import { Loader } from '../Loader/Loader';
-import './Contact.scss'
+import emailjs from '@emailjs/browser';
 import Swal from "sweetalert2";
-import { Navigate } from 'react-router-dom';
-
-
 
 export const Contact = () =>{
-
-    const { loading } = useProducts()
-
     const form = useRef()
 
     const SweetAlert = () =>{
-
         Swal.fire({
             icon: 'success',
             title: 'Mensaje enviado',
@@ -26,7 +18,6 @@ export const Contact = () =>{
 
     const sendEmail = (e) => {
         e.preventDefault();
-    
         emailjs.sendForm('service_gc9i73k', 'template_ll3tbsw', form.current, 'r9DxNrJgEwkNl7DmH')
             .then((result) => {
                 SweetAlert()
@@ -36,6 +27,7 @@ export const Contact = () =>{
             });
             e.target.reset();
         };
+
     return(
         <div className="contactBody">
             <div className='contactContainer'>
@@ -49,10 +41,8 @@ export const Contact = () =>{
                         <button type="submit" className='btn-Send'>ENVIAR MENSAJE</button>
                         <p className='fs-6 m-0 align-self-end text-secondary'>@emailJS</p>
                     </form>
-                    
-
                 </div>
             </div>
         </div>
     )
-}
+};

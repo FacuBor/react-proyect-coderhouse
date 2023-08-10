@@ -1,18 +1,17 @@
-import React, { useState, useEffect } from 'react';
 import './Carouselhome.scss';
+import { useState, useEffect } from 'react';
 import { useProducts } from '../../hooks/useProducts';
 import { Loader } from '../Loader/Loader';
+
 export const CarouselHome =()=>{
-    const { products, loading } = useProducts()
+    const { products, loading } = useProducts();
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(()=>{
         const interval = setInterval(()=>{
             randomSlide()
         }, 3000)
-
         return ()=> clearInterval(interval);
-
     },[products]);
 
     const randomSlide = ()=>{
@@ -22,24 +21,16 @@ export const CarouselHome =()=>{
         }
         setCurrentIndex(randomIndex)
     }
-
-
-
     const nextSlide = () => {
         randomSlide()
-    };
-    
+    }
     const prevSlide = () => {
         randomSlide()
-    };
-
-
-
+    }
 
     if(loading){
         return <Loader/>
-    }
-    
+    };
     return (
         <div className="carousel-container">
             <div className='carousel-detail-container'>

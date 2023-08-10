@@ -8,15 +8,13 @@ export const useProducts = () =>{
     const[loading, setLoading] = useState(true)
     const { categoryId } = useParams()
         
-
     useEffect(()=>{
         setLoading(true)
-        //armar referencia (sync)
+        //referencia (sync)
         const productsRef = collection(dataBase, "productos")
         const q = categoryId 
                             ? query(productsRef, where('category', '==', categoryId))
                             : productsRef
-
         //llamar referencia (async)
         getDocs(q)
         .then((resp)=>{
@@ -27,16 +25,10 @@ export const useProducts = () =>{
                 }
             } )
             setProducts(docs)
-            
         })
         .catch(e => console.log(e))
         .finally(()=> setLoading(false))
-
-        
-    }, [categoryId])
-
-
-
+    }, [categoryId]);
 
     return {products, loading}
 }

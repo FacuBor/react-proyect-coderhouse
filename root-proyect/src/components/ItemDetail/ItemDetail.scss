@@ -1,4 +1,3 @@
-
 .detailContainer{
     width: 100%;
     height: 100%;
@@ -9,8 +8,6 @@
         width: 100%;
         display: flex;
     }
-
-
     .detail-box{
         background-color: rgb(255, 255, 255);
         padding: 10px;
@@ -40,10 +37,9 @@
             border: .1px solid rgb(225, 225, 225);
             border-radius: 5px;
             width: 40%;
-            height: 80%;
+            height: 90%;
             overflow-x: hidden;
             overflow-y: auto;
-
             .detail-title{
                 font-size: 35px;
                 text-align: center;
@@ -64,7 +60,6 @@
                 padding: 8px 4%;
                 color: rgb(255, 255, 255);
                 background-color: rgba(0, 55, 255, 0.935);
-                
             }
             .btn-SeguirComprando:hover{
                 background-color: rgba(0, 55, 255, 0.801);
@@ -84,6 +79,6 @@
             }
         }
     }
-}
+};
 
 

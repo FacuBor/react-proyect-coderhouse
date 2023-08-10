@@ -1,28 +1,25 @@
-@import '/src/variables/variables';
 .homeBody{
     width: 100%;
     height: max-content;
-    background-color: $primary-color;
+    background-color: rgb(74, 76, 86);
     padding: 20px 10%;
     .home-container{
         padding: 20px 10px;
         width: 100%;
         min-height: 1600px;
         height: max-content;
-        background-color: $fifth-color;
+        background-color: rgb(255, 255, 255);
         gap: 100px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        
     }
     .carouselContainer{
-        background-color: $tertiary-color;
+        background-color: rgb(225, 225, 225);
         width: 80%;
         height: 70%;
         display: grid;
         place-items: center;
-
     }
 } 

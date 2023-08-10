@@ -8,7 +8,6 @@ export const Footer = () =>{
     return(
         <div className='footerContainer'>
             <div className='footerContent'>
-                
                 <div className='iconContainer'>
                     <a href="http://" target="_blank" rel="noopener noreferrer"><FaFacebookSquare className='footerIcon'/></a>
                     <a href="http://" target="_blank" rel="noopener noreferrer"><FaInstagram className='footerIcon' /></a>

@@ -1,6 +1,5 @@
-@import'/src/variables/variables';
 .header{
-  background-color: $fourth-color;
+  background-color: rgb(206, 206, 206);
   width: 100%;
   .header__container{
     padding: 2vh 4vw;
@@ -13,17 +12,9 @@
       font-weight: 600;
       color: rgb(204, 116, 0);
     }
-    
   }
   .header__logo{
     font-size: 60px;
-    color: $secondary-color;
+    color: rgba(249, 141, 0, 0.763);
   }
-}
-
-.dark-mode{
-  .header{
-    background-color: $fourth-color;
-  }
-}
-
+};

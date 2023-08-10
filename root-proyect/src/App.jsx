@@ -8,25 +8,17 @@ import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetail
 import { Footer } from './components/Footer/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
-import { DarkModeProvider } from './context/DarkModeContext';
 import { Cartview } from './components/Cart/CartView';
 import { ToastContainer } from "react-toastify"
 import { CheckOut } from './components/CheckOut/CheckOut'
 import { Error404 } from './components/Error404/Error404'
 
 function App() {
-
-
         return (
-          <DarkModeProvider>
               <CartProvider>
-                  
                   <BrowserRouter >
-                      
                       <ToastContainer/> 
-                      
                       <Header />
-                      
                       <Routes>
                         <Route path='/' element={ <Home />} />
                         <Route path='/itemlist' element={ <ItemListContainer /> } />
@@ -37,12 +29,9 @@ function App() {
                         <Route path='*' element={ <Error404/> } />
                         <Route path='/checkout' element={ <CheckOut/> }/>
                       </Routes>
-                      
                       <Footer/>
                   </BrowserRouter>
-                  
               </CartProvider>
-          </DarkModeProvider>
         )
 }
 export default App

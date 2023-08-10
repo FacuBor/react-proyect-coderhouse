@@ -1,10 +1,7 @@
 import './Error404.scss'
 import { BiError } from "react-icons/bi";
 
-
 export const Error404 = () =>{
-
-
     return(
         <div className='error404Container'>
             <div className='error404Content'>
@@ -16,7 +13,6 @@ export const Error404 = () =>{
                     <p>Lo sentimos, pero la pagina que buscas no existe.</p>
                 </div>
             </div>
-
         </div>
     )
 }

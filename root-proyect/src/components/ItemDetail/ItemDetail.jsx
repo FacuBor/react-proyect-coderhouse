@@ -1,25 +1,19 @@
 import './ItemDetail.scss'
 import { ItemCount } from '../ItemCount/ItemCount'
-import { useState} from 'react'
-import { useContext } from 'react'
+import { useState, useContext} from 'react'
 import { CartContext } from '../../context/CartContext'
 import { Link } from 'react-router-dom'
 
 export const ItemDetail = ({item}) =>{
-
-    const { agregarCarrito, isInCart } = useContext(CartContext)
-    
-    const[counter, setCounter] = useState(1)
-
+    const { agregarCarrito, isInCart } = useContext(CartContext);
+    const[counter, setCounter] = useState(1);
     const handleAgregar = () =>{
         const newItem = {
             ...item,
             counter
         }
         agregarCarrito(newItem);
-    }
-
-    
+    };
 
     return(
         <div className='detailContainer '>
@@ -39,13 +33,14 @@ export const ItemDetail = ({item}) =>{
                                                         max={item.stock}      
                                                         counter={counter}      
                                                         setCounter={setCounter}      
-                                                        agregar={handleAgregar}/>)
+                                                        agregar={handleAgregar}/>
+                                                    )
                                         }
-                                    </div>)}
-                                    <Link className='btn-SeguirComprando' to='/itemList'>Seguir comprando</Link>
+                                    </div>)
+                    }
+                    <Link className='btn-SeguirComprando' to='/itemList'>Seguir comprando</Link>
                 </div>
             </div>
         </div>
     )
-
 }

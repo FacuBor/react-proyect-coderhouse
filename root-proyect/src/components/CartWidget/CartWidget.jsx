@@ -10,7 +10,6 @@ export const CartWidget = ()=>{
         <Link to="/cart" className= 'cartWidget'>
             <FaCartShopping  className='cartIcon'/>
             <span className='cartSpan'>{totalCartItems()}</span>
-            
         </Link>
     )
-}
+};

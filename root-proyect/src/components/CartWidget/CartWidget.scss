@@ -7,20 +7,18 @@
     text-decoration: none;
     min-width: 60px;
     gap: 5px;
-
     .cartIcon{
         font-size: 30px;
         color: rgb(41, 42, 47);
     }
-    
     .cartSpan{
         color: rgb(41, 42, 47);
         font-size: 20px;
     }
-}
+};
 .cartWidget:hover{
     .cartIcon, .cartSpan{
         cursor: pointer;
         color: rgb(217, 123, 0);
     }
-}
+};
